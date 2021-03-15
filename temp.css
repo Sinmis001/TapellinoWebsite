@@ -1,0 +1,40 @@
+* {
+	color:white;
+	font-family:arial;
+}
+#center {
+	margin:0;
+	padding:0;
+	margin-left:30vw;
+	padding-top:24.5vh;
+	padding-bottom:24.5vh;
+}
+div img {
+	width:40vw;
+}
+html {
+	height:100%;
+	width:100%;
+}
+body {
+	background-color:#0a0a0a;
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+footer {
+	background-color:#353535;
+	padding:0;
+	margin:0;
+	height:60px;
+	position:relative;
+	bottom:0;
+}
+footer p {
+	padding:0;
+	margin:0;
+	font-size:125%;
+	padding-top:20px;
+	padding-left:2%;
+}
