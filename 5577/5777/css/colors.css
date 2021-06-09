@@ -1,0 +1,73 @@
+/* Main Color Kit */
+/* Std White | #ffffff */
+/* Black matt 1 | #101010 */
+/* Black matt 2 | #202020 */
+/* Silver Grey | #afafaf */
+/* Crystal Blue | #00add8 */
+/* Bright Red | #ff0000 */
+
+/* HTML Standard Document */
+
+* {
+    color: #ffffff;
+}
+
+body {
+    background-color: #101010;
+}
+
+header {
+    background-color: #202020;
+}
+
+footer {
+    background-color: #202020;
+}
+
+/* Navigation Personalization */
+
+div.flex-navig.triggered {
+    background-color: #202020;
+    box-shadow: 2px 3px 0px rgba(175, 175, 175, 0.2);
+}
+
+div#NCF {
+    background-color: #202020;
+}
+
+div#CCF {
+    background-color: #202020;
+}
+
+@media screen and (max-width: 1000px) {
+    div.flex-navig.triggered {
+        background-color: #202020;
+        box-shadow: none !important;
+    }
+
+    div.flex-navig.triggered a {
+        border-bottom: 0.5px solid #ffffff;
+    }
+
+}
+
+/* Footer Personalization */
+
+div#finformation p {
+    color: #999999;
+}
+
+div#webmaker p {
+    color: #a5a5a5;
+}
+
+/* Personalized */
+
+.active {
+    color: #00add8;    
+}
+
+.arrow {
+    border: solid #ffffff;
+    border-width:0 3px 3px 0;
+}
