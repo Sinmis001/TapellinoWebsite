@@ -71,7 +71,6 @@ div.flex-navig {
 
 div.flex-navig.triggered {
     max-width: 450px;
-    min-width: 50px;
     max-height: 1700px;
     min-height: 400px;
     display: flex;
@@ -100,6 +99,8 @@ div.flex-navig a {
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
 }
 
 i.nav-phone {
@@ -221,4 +222,6 @@ i.nav-phone {
     height:100%;
     margin-top:auto;
     margin-bottom:auto;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
 }
