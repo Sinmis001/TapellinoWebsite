@@ -77,9 +77,9 @@ div.flex-navig.triggered {
     flex-direction: column;
     flex-wrap: nowrap;
     flex: 1 1 auto;
-    align-items: center;
+    align-items: flex-start;
     position: absolute;
-    top:10vh;
+    top:8vh;
 }
 
 /* Standard Menu Personalization */
@@ -101,6 +101,21 @@ div.flex-navig a {
     align-items: center;
     padding-left: 0.75em;
     padding-right: 0.75em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    box-sizing: border-box;
+}
+
+.nav-header {
+    width:100%;
+    height: inherit;
+    margin:0;
+    padding:0;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    box-sizing: border-box;
 }
 
 i.nav-phone {
@@ -143,10 +158,10 @@ i.nav-phone {
         display: flex !important;
         flex: 5 1 auto;
         flex-direction: column !important;
-        align-items: center;
+        align-items: flex-start;
     }
     div#CCF.poked {
-        top:6vh;        
+        top:8vh;        
     }
 
     .poked + .nav-phone {
@@ -159,6 +174,17 @@ i.nav-phone {
         min-height: 50px !important;
         width:100% !important;
         flex: 1 0 auto;
+        justify-content: flex-start !important;
+        padding-left:0.65em !important;
+        box-sizing: border-box;
+    }
+
+    .ncategory:first-child {
+        padding:0 !important;
+    }
+
+    .nctab {
+        padding-left:0.65em;
     }
 
     div.flex-navig.triggered {
@@ -170,11 +196,17 @@ i.nav-phone {
     div.flex-navig.triggered a {
         font-family: VRRegular !important;
         font-size: 1.025em !important;
+        padding-left: 0.75em;
     }
 
     .active {
         font-size: 1.15em !important;
         font-family: VRBold;
+    }
+
+    .ncategory p {
+        margin:0;
+        padding:0;
     }
 
 }

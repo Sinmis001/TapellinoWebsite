@@ -31,6 +31,10 @@ div.flex-navig.triggered {
     box-shadow: 2px 3px 0px rgba(175, 175, 175, 0.2);
 }
 
+.nav-header {
+    background-color: #404040;
+}
+
 div#NCF {
     background-color: #202020;
 }
@@ -45,10 +49,9 @@ div#CCF {
         box-shadow: none !important;
     }
 
-    div.flex-navig.triggered a {
-        border-bottom: 0.5px solid #ffffff;
+    .poked + .nav-phone {
+        color:#0dcfff;
     }
-
 }
 
 /* Footer Personalization */

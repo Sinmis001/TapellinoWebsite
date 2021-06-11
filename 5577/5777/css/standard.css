@@ -16,11 +16,19 @@ body {
     margin:0;
     padding:0;
 }
+
+@media screen and (max-width:1000px) {
+    body {
+        overflow-y:auto;
+    }
+}
+
 header {
     position: relative;
     height: 10vh;
     z-index:999;
 }
+
 main {
     position: relative;
     height: auto;
