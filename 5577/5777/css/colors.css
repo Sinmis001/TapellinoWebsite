@@ -43,6 +43,24 @@ div#CCF {
     background-color: #202020;
 }
 
+div.nctab p, div.nctab div.arrow , div.navobj a {
+    color:#ffffff;
+    transition: color 0.5s, border 0.5s;
+}
+
+div.nctab:hover div.arrow {
+    border: solid #10e044;
+    border-width:0 3px 3px 0;
+}
+
+div.nctab:hover .ncategory p {
+    color:#10e044 !important;
+}
+
+div.navobj:hover a{
+    color:#10e044 !important;
+}
+
 @media screen and (max-width: 1000px) {
     div.flex-navig.triggered {
         background-color: #202020;
@@ -67,7 +85,7 @@ div#webmaker p {
 /* Personalized */
 
 .active {
-    color: #00add8;    
+    color: #00add8 !important;    
 }
 
 .arrow {
