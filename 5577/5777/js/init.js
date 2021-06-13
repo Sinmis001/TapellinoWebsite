@@ -130,7 +130,7 @@ function navig(navparent) {
     NCFDiv.appendChild(PMi);
 
     const elelist = [ahome, acontact];
-    const linkerlist = ['contact', 'linkylist'];
+    const linkerlist = ['home', 'contact', 'linkylist'];
     const listlinkerlist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'dprinting#banners', 'stickers', 'dprinting', 'lasercut', 'acrylicfab'];
     activepagehandler(elelist, linkerlist, listlinkerlist);
 
@@ -166,12 +166,14 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
                     var activea = document.querySelector("a["+listlinkestlist[llnum]+"]");
                     activea.setAttribute("class", "active");
                     elementlist[0].removeAttribute("class");
+                    break;
                 }
             }
         }
         if(url[1]==linkestlist[lnum]) {
             elementlist[lnum].setAttribute("class", "active");
             elementlist[0].removeAttribute("class");
+            break;
         }
     }
 }
