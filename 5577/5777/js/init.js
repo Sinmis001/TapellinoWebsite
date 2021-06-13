@@ -162,14 +162,14 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
     for(lnum=0; lnum<linkestlist.length; lnum++) {
         if(linkestlist[lnum]=='linkylist') {
             for(llnum=0; llnum<listlinkestlist.length; llnum++) {
-                if(url==listlinkestlist[llnum]) {
+                if(url[1]==listlinkestlist[llnum]) {
                     var activea = document.querySelector("a["+listlinkestlist[llnum]+"]");
                     activea.setAttribute("class", "active");
                     elementlist[0].removeAttribute("class");
                 }
             }
         }
-        if(url==linkestlist[lnum]) {
+        if(url[1]==linkestlist[lnum]) {
             elementlist[lnum].setAttribute("class", "active");
             elementlist[0].removeAttribute("class");
         }
