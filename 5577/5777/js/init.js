@@ -87,8 +87,9 @@ function navig(navparent) {
     const anamelist = ['Exterior Signs', 'Interior Signs', '3D Signs', 'Illuminated Signs', 'Banners', 'Stickers', 'Digital Printing', 'Laser Cutting', 'Acrylic Fabrication'];
     const alinklist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'dprinting#banners', 'stickers', 'dprinting', 'lasercut', 'acrylicfab'];
     const pnamelist = ['Signs', 'Other'];
-    
-    listmaker(divpsr, anamelist, alinklist, pnamelist);
+    const foldloc = "products&services";
+
+    listmaker(divpsr, anamelist, alinklist, pnamelist, foldloc);
 
     // Portfolio  Element
     const divport = document.createElement("div");
@@ -136,7 +137,7 @@ function navig(navparent) {
 
 }
 
-function listmaker(parelement, listname, listlink, plistname) {
+function listmaker(parelement, listname, listlink, plistname, folderloc) {
     var lnum, llnum=0, amake, atext, pmake, ptext;
     for(lnum=0; lnum<listlink.length; lnum++) {
         if(lnum==0 || lnum==5) {
@@ -148,7 +149,7 @@ function listmaker(parelement, listname, listlink, plistname) {
             llnum++;
         } else {
             amake = document.createElement("a");
-            amake.setAttribute("href", listlink[lnum]);
+            amake.setAttribute("href", folderloc+"/"+listlink[lnum]);
             atext = document.createTextNode(listname[lnum]);
             amake.appendChild(atext);
             parelement.appendChild(amake);
