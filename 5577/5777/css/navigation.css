@@ -72,7 +72,7 @@ div.flex-navig {
 div.flex-navig.triggered {
     max-width: 450px;
     max-height: 1700px;
-    min-height: 400px;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
