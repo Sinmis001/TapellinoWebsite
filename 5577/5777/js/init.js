@@ -296,7 +296,11 @@ function footerconstructor() {
 
     const namelist = ['Schedule'];
     const linklist = ['contact#schedule'];
-    widemaker(finfodiv, namelist, linklist);
+    var fold="";
+    if(typedoca || typedocb) {
+        fold="../";
+    }
+    widemaker(finfodiv, namelist, linklist, fold);
     
     // website maker wait that's me!
     const webmdiv = document.createElement("div");
@@ -309,11 +313,11 @@ function footerconstructor() {
     webmdiv.appendChild(webmp);
 }
 
-function widemaker(parelement, listname, listlink) {
+function widemaker(parelement, listname, listlink, folderdoc) {
     var lnum, amake, atext;
     for(lnum=0; lnum<listlink.length; lnum++) {
         amake = document.createElement("a");
-        amake.setAttribute("href", listlink[lnum]);
+        amake.setAttribute("href", folderdoc+listlink[lnum]);
         atext = document.createTextNode(listname[lnum]);
         amake.appendChild(atext);
         parelement.appendChild(amake);
