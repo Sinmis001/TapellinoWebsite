@@ -38,6 +38,14 @@ function logocontainer(navparent) {
 }
 
 function navig(navparent) {
+    // Location Handler
+    var typedoca = document.getElementById("outdocps");
+    var typedocb = document.getElementById("outdocpo");
+    var subfold="";
+    if(typedoca || typedocb) {
+        subfold="../";
+    }
+
     // Core Nav Divs Maker
     const NCFDiv = document.createElement("div");
     NCFDiv.setAttribute("id", "NCF");
@@ -46,86 +54,37 @@ function navig(navparent) {
     CCFDiv.setAttribute("id", "CCF");
     NCFDiv.appendChild(CCFDiv);
 
-    // Nav Elements
+    // The things that people use to go around the webspace 
 
     // Home Element
-    const divhome = document.createElement("div");
-    divhome.setAttribute("class", "navobj");
-    CCFDiv.appendChild(divhome);
-
-    const ahome = document.createElement("a");
-    ahome.setAttribute("href", "https://www.tapellino.com");
-    ahome.setAttribute("class", "active");
-    const texthome = document.createTextNode("Home");
-    ahome.appendChild(texthome);
-    divhome.appendChild(ahome);
+    var hometext = "Home";
+    var homelink = "https://www.tapellino.com";
+    ahandler(CCFDiv, hometext, homelink);
 
     // Products / Services Element
-    const divps = document.createElement("div");
-    divps.setAttribute("class", "nctab");
-    CCFDiv.appendChild(divps);
-
-    divpse.setAttribute("class", "nct ncategory");
-    divps.appendChild(divpse);
-    
-    const divpst = document.createElement("div");
-    divpst.setAttribute("class", "ncategory");
-    divpse.appendChild(divpst);
-
-    const pps = document.createElement("p");
-    const ppst = document.createTextNode("Products / Services");
-    pps.appendChild(ppst);
-    divpst.appendChild(pps);
-
-    const divpsarr = document.createElement("div");
-    divpsarr.setAttribute("class", "arrow down");
-    divpst.appendChild(divpsarr);
-
-    divpsr.setAttribute("class", "flex-navig");
-    divps.appendChild(divpsr);
+    var pstext = "Products / Services";
+    listhandler(CCFDiv, pstext, divpse, divpsr);
 
     const anamelist = ['Exterior Signs', 'Interior Signs', '3D Signs', 'Illuminated Signs', 'Banners', 'Stickers', 'Digital Printing', 'Laser Cutting', 'Acrylic Fabrication'];
     const alinklist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'dprinting#banners', 'stickers', 'dprinting', 'lasercut', 'acrylicfab'];
     const pnamelist = ['Signs', 'Other'];
-    const foldloc = "products&services";
-
+    var foldloc = "products&services";
+    if(typedoca) {
+        foldloc = "";
+    } else if(typedocb) {
+        foldloc = "../products&services";
+    }
     listmaker(divpsr, anamelist, alinklist, pnamelist, foldloc);
 
     // Portfolio  Element
-    const divport = document.createElement("div");
-    divport.setAttribute("class", "nctab");
-    CCFDiv.appendChild(divport);
-
-    divporte.setAttribute("class", "nct ncategory");
-    divport.appendChild(divporte);
-    
-    const divportt = document.createElement("div");
-    divportt.setAttribute("class", "ncategory");
-    divporte.appendChild(divportt);
-
-    const portp = document.createElement("p");
-    const portt = document.createTextNode("Portfolio");
-    portp.appendChild(portt);
-    divportt.appendChild(portp);
-
-    const divportarr = document.createElement("div");
-    divportarr.setAttribute("class", "arrow down");
-    divportt.appendChild(divportarr);
-
-    divportr.setAttribute("class", "flex-navig");
-    divport.appendChild(divportr);
+    var porttext = "Portfolio"
+    listhandler(CCFDiv, porttext, divporte, divportr);
 
     // Contact Element
-    const divcontact = document.createElement("div");
-    divcontact.setAttribute("class", "navobj");
-    CCFDiv.appendChild(divcontact);
-
-    const acontact = document.createElement("a");
-    acontact.setAttribute("href", "contact");
-    const textcontact = document.createTextNode("Contact");
-    acontact.appendChild(textcontact);
-    divcontact.appendChild(acontact);
-
+    var contacttext = "Contact";
+    var contactlink = "contact";
+    ahandler(CCFDiv, contacttext, contactlink);
+    
     // Phone Menu Maker
     PMi.setAttribute("class", "fa fa-bars nav-phone");
     NCFDiv.appendChild(PMi);
@@ -135,6 +94,45 @@ function navig(navparent) {
     const listlinkerlist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'dprinting#banners', 'stickers', 'dprinting', 'lasercut', 'acrylicfab'];
     activepagehandler(elelist, linkerlist, listlinkerlist);
 
+}
+
+function ahandler(parelement, elementtext, elementlink) {
+    var amaker, atext, divmaker;
+    divmaker = document.createElement("div");
+    divmaker.setAttribute("class", "navobj");
+
+    amaker = document.createElement("a");
+    amaker.setAttribute("href", elementlink);
+    atext = document.createTextNode(elementtext);
+
+    amaker.appendChild(atext);
+    divmaker.appendChild(amaker);
+    parelement.appendChild(divmaker);
+}
+
+function listhandler(parelement, elementtext, identifier1, identifier2) {
+    var topdiv = document.createElement("div");
+    topdiv.setAttribute("class", "nctab");
+    parelement.appendChild(topdiv);
+
+    identifier1.setAttribute("class", "nct ncategory");
+    topdiv.appendChild(identifier1);
+    
+    var textdiv = document.createElement("div");
+    textdiv.setAttribute("class", "ncategory");
+    identifier1.appendChild(textdiv);
+
+    var pelement = document.createElement("p");
+    var ptext = document.createTextNode(elementtext);
+    pelement.appendChild(ptext);
+    textdiv.appendChild(pelement);
+
+    var arrowdiv = document.createElement("div");
+    arrowdiv.setAttribute("class", "arrow down");
+    textdiv.appendChild(arrowdiv);
+
+    identifier2.setAttribute("class", "flex-navig");
+    topdiv.appendChild(identifier2);
 }
 
 function listmaker(parelement, listname, listlink, plistname, folderloc) {
