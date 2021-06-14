@@ -77,11 +77,11 @@ function navig(navparent) {
     const anamelist = ['Exterior Signs', 'Interior Signs', '3D Signs', 'Illuminated Signs', 'Banners', 'Stickers', 'Digital Printing', 'Laser Cutting', 'Acrylic Fabrication'];
     const alinklist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'dprinting#banners', 'stickers', 'dprinting', 'lasercut', 'acrylicfab'];
     const pnamelist = ['Signs', 'Other'];
-    var foldloc = "products&services";
+    var foldloc = "products&services/";
     if(typedoca) {
         foldloc = "";
     } else if(typedocb) {
-        foldloc = "../products&services";
+        foldloc = "../products&services/";
     }
     listmaker(divpsr, anamelist, alinklist, pnamelist, foldloc);
 
@@ -159,7 +159,7 @@ function listmaker(parelement, listname, listlink, plistname, folderloc) {
             llnum++;
         } else {
             amake = document.createElement("a");
-            amake.setAttribute("href", folderloc+"/"+listlink[lnum]);
+            amake.setAttribute("href", folderloc+listlink[lnum]);
             atext = document.createTextNode(listname[lnum]);
             amake.appendChild(atext);
             parelement.appendChild(amake);
@@ -175,12 +175,12 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
         if(linkestlist[lnum]=='linkylist') {
             for(llnum=0; llnum<listlinkestlist.length; llnum++) {
                 if(url[1]=="products&services/"+listlinkestlist[llnum]) {
-                    var activea = document.querySelector("a["+listlinkestlist[llnum]+"]");
+                    var activea = $("a[href='"+listlinkestlist[3]+"']");
                     activea.setAttribute("class", "active");
                     elementlist[0].removeAttribute("class");
                     break;
                 } else if(url[1]=="portfolio/"+listlinkestlist[llnum]) {
-                    var activea = document.querySelector("a["+listlinkestlist[llnum]+"]");
+                    var activea = $("a[href='"+listlinkestlist[3]+"']");
                     activea.setAttribute("class", "active");
                     elementlist[0].removeAttribute("class");
                     break;
