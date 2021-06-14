@@ -16,13 +16,7 @@ function navloader() {
     const headerelement = document.getElementById("headerid");
     const navelement = document.createElement("nav");
     headerelement.appendChild(navelement); 
-    // Location Handler
-    var typedoca = document.getElementById("outdocps");
-    var typedocb = document.getElementById("outdocpo");
-    var subfold="";
-    if(typedoca || typedocb) {
-        subfold="../";
-    }
+    
     // Logo Creator Renderer
     logocontainer(navelement);
     // Main Navigation Part
@@ -30,6 +24,9 @@ function navloader() {
 }
 
 function logocontainer(navparent) {
+    var typedoca = document.getElementById("outdocps");
+    var typedocb = document.getElementById("outdocpo");
+    
     var logolocation = "images/tapellino.png";
     if(typedoca || typedocb) {
         logolocation="images/tapellino.png";
@@ -49,7 +46,14 @@ function logocontainer(navparent) {
 }
 
 function navig(navparent) {
-    
+    // Location Handler
+    var typedoca = document.getElementById("outdocps");
+    var typedocb = document.getElementById("outdocpo");
+    var subfold="";
+    if(typedoca || typedocb) {
+        subfold="../";
+    }
+
     // Core Nav Divs Maker
     const NCFDiv = document.createElement("div");
     NCFDiv.setAttribute("id", "NCF");
