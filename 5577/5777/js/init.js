@@ -15,7 +15,14 @@ const divlogocont = document.createElement("div");
 function navloader() {
     const headerelement = document.getElementById("headerid");
     const navelement = document.createElement("nav");
-    headerelement.appendChild(navelement);
+    headerelement.appendChild(navelement); 
+    // Location Handler
+    var typedoca = document.getElementById("outdocps");
+    var typedocb = document.getElementById("outdocpo");
+    var subfold="";
+    if(typedoca || typedocb) {
+        subfold="../";
+    }
     // Logo Creator Renderer
     logocontainer(navelement);
     // Main Navigation Part
@@ -23,6 +30,10 @@ function navloader() {
 }
 
 function logocontainer(navparent) {
+    var logolocation = "images/tapellino.png";
+    if(typedoca || typedocb) {
+        logolocation="images/tapellino.png";
+    }
     divlogocont.setAttribute("id", "logo_container");
     navparent.appendChild(divlogocont);
 
@@ -38,14 +49,7 @@ function logocontainer(navparent) {
 }
 
 function navig(navparent) {
-    // Location Handler
-    var typedoca = document.getElementById("outdocps");
-    var typedocb = document.getElementById("outdocpo");
-    var subfold="";
-    if(typedoca || typedocb) {
-        subfold="../";
-    }
-
+    
     // Core Nav Divs Maker
     const NCFDiv = document.createElement("div");
     NCFDiv.setAttribute("id", "NCF");
@@ -83,6 +87,9 @@ function navig(navparent) {
     // Contact Element
     var contacttext = "Contact";
     var contactlink = "contact";
+    if(typedoca || typedocb) {
+        contactlink="../contact";
+    }
     ahandler(CCFDiv, contacttext, contactlink);
     
     // Phone Menu Maker
@@ -156,7 +163,7 @@ function listmaker(parelement, listname, listlink, plistname, folderloc) {
 }
 
 function activepagehandler(elementlist, linkestlist, listlinkestlist) {
-    const url = window.location.pathname.split('#')[0].split('/5577/5777/');
+    const url = window.location.pathname.split('#')[0].split('/5577/5777/').split('products&services').split('portfolio');
     var lnum, llnum;
     for(lnum=0; lnum<linkestlist.length; lnum++) {
         if(linkestlist[lnum]=='linkylist') {
