@@ -150,20 +150,19 @@ function listhandler(parelement, elementtext, identifier1, identifier2) {
 function listmaker(parelement, listname, listlink, plistname, folderloc) {
     var lnum, llnum=0, amake, atext, pmake, ptext;
     for(lnum=0; lnum<listlink.length; lnum++) {
-        if(lnum==0 || lnum==5) {
+        if(lnum==0 || lnum==4) {
             pmake = document.createElement("p");
             pmake.setAttribute("class", "nav-header");
             ptext = document.createTextNode(plistname[llnum]);
             pmake.appendChild(ptext);
             parelement.appendChild(pmake);
             llnum++;
-        } else {
-            amake = document.createElement("a");
-            amake.setAttribute("href", folderloc+listlink[lnum]);
-            atext = document.createTextNode(listname[lnum]);
-            amake.appendChild(atext);
-            parelement.appendChild(amake);
         }
+        amake = document.createElement("a");
+        amake.setAttribute("href", folderloc+listlink[lnum]);
+        atext = document.createTextNode(listname[lnum]);
+        amake.appendChild(atext);
+        parelement.appendChild(amake);
     }
 }
 
@@ -321,9 +320,19 @@ function widemaker(parelement, listname, listlink) {
     }
 }
 
+function errorcatcher(functionchecker) {
+    try {
+        functionchecker();
+    }
+    catch(error) {
+        console.error(error);
+    }
+
+}
+
 function initalizer() {
-    navloader();
-    footerconstructor();
+    errorcatcher(navloader);
+    errorcatcher(footerconstructor);
 }
 
 document.body.onload = initalizer;
