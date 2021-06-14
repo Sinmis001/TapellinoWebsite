@@ -174,12 +174,12 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
         if(linkestlist[lnum]=='linkylist') {
             for(llnum=0; llnum<listlinkestlist.length; llnum++) {
                 if(url[1]=="products&services/"+listlinkestlist[llnum]) {
-                    var activea = document.querySelector("a[href='"+listlinkestlist[3]+"']");
+                    var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
                     elementlist[0].removeAttribute("class");
                     break;
                 } else if(url[1]=="portfolio/"+listlinkestlist[llnum]) {
-                    var activea = document.querySelector("a[href='"+listlinkestlist[3]+"']");
+                    var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
                     elementlist[0].removeAttribute("class");
                     break;
