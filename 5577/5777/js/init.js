@@ -26,7 +26,7 @@ function navloader() {
 function logocontainer(navparent) {
     var typedoca = document.getElementById("outdocps");
     var typedocb = document.getElementById("outdocpo");
-    
+
     var logolocation = "images/tapellino.png";
     if(typedoca || typedocb) {
         logolocation="images/tapellino.png";
@@ -65,9 +65,10 @@ function navig(navparent) {
     // The things that people use to go around the webspace 
 
     // Home Element
+    var ahome = document.createElement("a");
     var hometext = "Home";
     var homelink = "https://www.tapellino.com";
-    ahandler(CCFDiv, hometext, homelink);
+    ahandler(CCFDiv, hometext, homelink, ahome);
 
     // Products / Services Element
     var pstext = "Products / Services";
@@ -89,12 +90,13 @@ function navig(navparent) {
     listhandler(CCFDiv, porttext, divporte, divportr);
 
     // Contact Element
+    var acontact = document.createElement("a");
     var contacttext = "Contact";
     var contactlink = "contact";
     if(typedoca || typedocb) {
         contactlink="../contact";
     }
-    ahandler(CCFDiv, contacttext, contactlink);
+    ahandler(CCFDiv, contacttext, contactlink, acontact);
     
     // Phone Menu Maker
     PMi.setAttribute("class", "fa fa-bars nav-phone");
@@ -107,17 +109,16 @@ function navig(navparent) {
 
 }
 
-function ahandler(parelement, elementtext, elementlink) {
-    var amaker, atext, divmaker;
+function ahandler(parelement, elementtext, elementlink, aelement) {
+    var atext, divmaker;
     divmaker = document.createElement("div");
     divmaker.setAttribute("class", "navobj");
 
-    amaker = document.createElement("a");
-    amaker.setAttribute("href", elementlink);
+    aelement.setAttribute("href", elementlink);
     atext = document.createTextNode(elementtext);
 
-    amaker.appendChild(atext);
-    divmaker.appendChild(amaker);
+    aelement.appendChild(atext);
+    divmaker.appendChild(aelement);
     parelement.appendChild(divmaker);
 }
 
@@ -167,12 +168,18 @@ function listmaker(parelement, listname, listlink, plistname, folderloc) {
 }
 
 function activepagehandler(elementlist, linkestlist, listlinkestlist) {
-    const url = window.location.pathname.split('#')[0].split('/5577/5777/').split('products&services').split('portfolio');
+    listlinkestlist
+    const url = window.location.pathname.split('#')[0].split('/5577/5777/')
     var lnum, llnum;
     for(lnum=0; lnum<linkestlist.length; lnum++) {
         if(linkestlist[lnum]=='linkylist') {
             for(llnum=0; llnum<listlinkestlist.length; llnum++) {
-                if(url[1]==listlinkestlist[llnum]) {
+                if(url[1]=="products&services"+listlinkestlist[llnum]) {
+                    var activea = document.querySelector("a["+listlinkestlist[llnum]+"]");
+                    activea.setAttribute("class", "active");
+                    elementlist[0].removeAttribute("class");
+                    break;
+                } else if(url[1]=="portfolio"+listlinkestlist[llnum]) {
                     var activea = document.querySelector("a["+listlinkestlist[llnum]+"]");
                     activea.setAttribute("class", "active");
                     elementlist[0].removeAttribute("class");
