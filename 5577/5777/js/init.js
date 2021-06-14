@@ -29,7 +29,7 @@ function logocontainer(navparent) {
 
     var logolocation = "images/tapellino.png";
     if(typedoca || typedocb) {
-        logolocation="images/tapellino.png";
+        logolocation="../images/tapellino.png";
     }
     divlogocont.setAttribute("id", "logo_container");
     navparent.appendChild(divlogocont);
@@ -40,7 +40,7 @@ function logocontainer(navparent) {
 
     const imglogo = document.createElement("img");
     imglogo.setAttribute("id", "logo");
-    imglogo.setAttribute("src", "images/tapellino.png");
+    imglogo.setAttribute("src", logolocation);
     imglogo.setAttribute("alt", "Tapellino Signs");
     alogo.appendChild(imglogo);
 }
