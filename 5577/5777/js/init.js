@@ -10,6 +10,44 @@ const divportr = document.createElement("div");
 const CCFDiv = document.createElement("div");
 const divlogocont = document.createElement("div");
 
+// Header Assembly 
+
+function headerassembler() {
+    // Location Handler
+    var typedoca = document.getElementById("outdocps");
+    var typedocb = document.getElementById("outdocpo");
+
+    // CSS Loader
+    var headerboy;
+    if(document.getElementById("headerhandler") != null) {
+        headerboy = document.getElementById("headerhandler");
+    } else if(document.getElementById("outdocps") != null) {
+        headerboy = document.getElementById("outdocps")
+    } else {
+        headerboy = document.getElementById("outdocpo");
+    }
+    const csslinks = ['fontsinit.css', 'core.css', 'navigcore.css', 'footcore.css', 'colorpallet.css'];
+    var locationdiscovery = 'css/';
+    if(typedoca || typedocb) {
+        locationdiscovery = '../css/';
+    }
+    csslinkhandler(headerboy, csslinks, locationdiscovery);
+
+    const outsourcedlinks = ['https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'];
+    var locationdiscoverynone = '';
+    csslinkhandler(headerboy, outsourcedlinks, locationdiscoverynone);
+}
+
+function csslinkhandler(parelement, linkarray, locationhandler) {
+    var linkmaker, lnum;
+    for(lnum=0; lnum<linkarray.length; lnum++) {
+        linkmaker = document.createElement("link");
+        linkmaker.setAttribute("href", locationhandler+linkarray[lnum]);
+        linkmaker.setAttribute("rel", "stylesheet");
+        parelement.appendChild(linkmaker);
+    }
+}
+
 // Nav constructor
 
 function navloader() {
@@ -339,6 +377,7 @@ function errorcatcher(functionchecker) {
 }
 
 function initalizer() {
+    errorcatcher(headerassembler);
     errorcatcher(navloader);
     errorcatcher(footerconstructor);
 }
