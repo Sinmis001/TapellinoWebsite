@@ -74,8 +74,8 @@ function navig(navparent) {
     var pstext = "Products / Services";
     listhandler(CCFDiv, pstext, divpse, divpsr);
 
-    const anamelist = ['Exterior Signs', 'Interior Signs', '3D Signs', 'Illuminated Signs', 'Banners', 'Stickers', 'Digital Printing', 'Laser Cutting', 'Acrylic Fabrication'];
-    const alinklist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'dprinting#banners', 'stickers', 'dprinting', 'lasercut', 'acrylicfab'];
+    const anamelist = ['Exterior Signs', 'Interior Signs', '3D Signs', 'Illuminated Signs', 'Stickers', 'Banners', 'Digital Printing', 'Laser Cutting', 'Acrylic Fabrication'];
+    const alinklist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'stickers', 'dprinting#banners', 'dprinting', 'lasercut', 'acrylicfab'];
     const pnamelist = ['Signs', 'Other'];
     var foldloc = "products&services/";
     if(typedoca) {
@@ -104,7 +104,7 @@ function navig(navparent) {
 
     const elelist = [ahome, acontact];
     const linkerlist = ['home', 'contact', 'linkylist'];
-    const listlinkerlist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'dprinting#banners', 'stickers', 'dprinting', 'lasercut', 'acrylicfab'];
+    const listlinkerlist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'stickers', 'dprinting#banners', 'dprinting', 'lasercut', 'acrylicfab'];
     activepagehandler(elelist, linkerlist, listlinkerlist);
 
 }
@@ -266,6 +266,10 @@ phonemenu.onclick = z => {
 function footerconstructor() {
     const footerid = document.getElementById("footerid");
     
+    // Location Handler
+    var typedoca = document.getElementById("outdocps");
+    var typedocb = document.getElementById("outdocpo");
+
     // copyrights
     const copydiv = document.createElement("div");
     copydiv.setAttribute("id", "copyright");
