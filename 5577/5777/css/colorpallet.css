@@ -118,7 +118,10 @@ div#catalog div#catalogtext h2 {
 }
 
 div#catalog div#catalogcontent div.content {
-    background-color: #404040;
+    background-color: #303030;
+    border-bottom: 0.75em solid #101010;
+    border-right: 0.75em solid #101010;
+    box-shadow: 0.15em 0.15em 0.25em #101010;
 }
 
 div#catalog div#catalogcontent div.content p a {
