@@ -226,8 +226,9 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
             elementlist[lnum].setAttribute("class", "active");
             break;
         }
-        else {
+        else if(linkestlist[lnum] != 'linkylist') {
             elementlist[0].setAttribute("class", "active");
+            break;
         }
     }
 }

@@ -234,7 +234,7 @@ div#impinfo i {
     }
     
     div#catalog div#catalogcontent div.content h1 {
-        top:70%;
+        top:75%;
         font-size: 1.05em;
         font-weight: 400;
         letter-spacing: 0.125em;
@@ -242,7 +242,7 @@ div#impinfo i {
     
     div#catalog div#catalogcontent div.content p {
         width:85%;
-        top:105%;
+        top:110%;
         font-size: 0.6em;
         letter-spacing: 0.125em;
     }
