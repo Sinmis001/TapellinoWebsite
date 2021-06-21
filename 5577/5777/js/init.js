@@ -205,7 +205,6 @@ function listmaker(parelement, listname, listlink, plistname, folderloc) {
 }
 
 function activepagehandler(elementlist, linkestlist, listlinkestlist) {
-    listlinkestlist
     const url = window.location.pathname.split('#')[0].split('/5577/5777/')
     var lnum, llnum, validator=0;
     for(lnum=0; lnum<linkestlist.length; lnum++) {
@@ -221,6 +220,7 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
                     break;
                 } else if(llnum == linkestlist.length-1){
                     validator++;
+                    console.log("sos");
                 }
             }
         }
@@ -228,7 +228,6 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
             elementlist[lnum].setAttribute("class", "active");
             break;
         }
-        validator=lnum;
         if(validator==1) {
             elementlist[0].setAttribute("class", "active");
             break;
