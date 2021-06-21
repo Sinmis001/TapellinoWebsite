@@ -2,6 +2,7 @@ footer {
     position: relative;
     height:8vh;
     z-index:1;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;

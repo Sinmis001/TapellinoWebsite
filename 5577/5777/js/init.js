@@ -214,20 +214,20 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
                 if(url[1]=="products&services/"+listlinkestlist[llnum]) {
                     var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
-                    elementlist[0].removeAttribute("class");
                     break;
                 } else if(url[1]=="portfolio/"+listlinkestlist[llnum]) {
                     var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
-                    elementlist[0].removeAttribute("class");
                     break;
                 }
             }
         }
-        if(url[1]==linkestlist[lnum]) {
+        if(url[1]==linkestlist[lnum] && linkestlist[lnum] != 'linkylist' ) {
             elementlist[lnum].setAttribute("class", "active");
-            elementlist[0].removeAttribute("class");
             break;
+        }
+        else {
+            elementlist[0].setAttribute("class", "active");
         }
     }
 }
@@ -377,9 +377,9 @@ function errorcatcher(functionchecker) {
 }
 
 function initalizer() {
-    errorcatcher(headerassembler);
     errorcatcher(navloader);
     errorcatcher(footerconstructor);
+    errorcatcher(headerassembler);
 }
 
 document.body.onload = initalizer;

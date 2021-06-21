@@ -92,3 +92,39 @@ div#webmaker p {
     border: solid #ffffff;
     border-width:0 3px 3px 0;
 }
+
+/* Per page */
+
+/* Sticker Page */
+
+div#title div#titlecover {
+    box-shadow: 0 -10em 20em #101010;
+    border-bottom: 0.25em solid #404040;
+    background-color: #101010;
+}
+
+div#title div#stickertext h1 {
+    text-shadow: 10px 10px 5px #101010;
+}
+
+div#catalog {
+    border-top: 0.4em solid #404040;
+    border-bottom: 0.4em solid #404040;
+    background-color: #202020;
+}
+
+div#catalog div#catalogtext h2 {
+    text-shadow: 10px 10px 5px #101010;
+}
+
+div#catalog div#catalogcontent div.content {
+    background-color: #404040;
+}
+
+div#catalog div#catalogcontent div.content p a {
+    color:#00add8;
+}
+
+div#impinfo i {
+    color: #aa0000;
+}

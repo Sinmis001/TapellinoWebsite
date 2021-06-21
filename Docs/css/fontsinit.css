@@ -16,3 +16,8 @@
     font-family: VRSemiBold;
     src: url(fonts/VRSemiBold.otf) format("opentype");
 }
+
+@font-face {
+    font-family: Enso;
+    src: url(fonts/Enso.ttf) format("truetype");
+}
