@@ -213,24 +213,23 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
                 if(url[1]=="products&services/"+listlinkestlist[llnum]) {
                     var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
-                    break;
+                    return 0;
                 } else if(url[1]=="portfolio/"+listlinkestlist[llnum]) {
                     var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
-                    break;
-                } else if(llnum == linkestlist.length-1){
+                    return 0;
+                } else if(llnum == (linkestlist.length-1)){
                     validator++;
-                    console.log("sos");
                 }
             }
         }
         if(url[1]==linkestlist[lnum] && linkestlist[lnum] != 'linkylist' ) {
             elementlist[lnum].setAttribute("class", "active");
-            break;
+            return 0;
         }
         if(validator==1) {
             elementlist[0].setAttribute("class", "active");
-            break;
+            return 0;
         }
     }
 }
