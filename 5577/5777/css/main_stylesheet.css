@@ -1,0 +1,201 @@
+/* HTML Standard Document */
+
+* {
+    color:var(--text-color);
+    font-family: VRRegular, Arial, Helvetica, sans-serif;
+}
+
+html {
+    margin:0;
+    padding:0;  
+}
+
+body {
+    /* Main Color Kit */
+    --text-color: #ffffff;
+    --background-color: #101010;
+    --accent_color: #333333;
+    --secondary_accent_color:#555555;
+    --third_accent_color:#222222;
+    --silver_accent: #afafaf;
+    --metal_color: #bbc2cc;
+    --dark_silver_accent: #777777;
+    --Crystal_blue: #00add8;
+    --Clear_water_blue: #1082e0;
+    
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index:1;
+    margin:0;
+    padding:0;
+    background-color:var(--background-color);
+}
+
+body.dark {
+    /* Main Color Kit */
+    --text-color: #333333;
+    --background-color: #eeeeee;
+    --accent_color: #bbbbbb;
+    --secondary_accent_color:#aaaaaa;
+    --silver_accent: #afafaf;
+    --metal_color: #bbc2cc;
+    --dark_silver_accent: #777777;
+}
+
+header {
+    position: relative;
+    height: 10vh;
+    z-index:999;
+    box-sizing: border-box;
+    background-color:var(--accent_color);
+}
+
+main {
+    position: relative;
+    height: auto;
+    z-index:1;
+    box-sizing: border-box;
+}
+
+/* Footer */
+
+footer {
+    background-color:var(--third_accent_color);
+}
+
+/* Menus & Nav */
+
+nav {
+    background-color: var(--third_accent_color);
+}
+
+div.menu_content_container.activated {
+    background-color: var(--third_accent_color);
+    box-shadow: 5px 7px 5px rgba(20, 20, 20, 0.75);
+}
+
+.nav-header {
+    background-color: var(--dark_silver_accent);
+}
+
+div#Upper_Nav_Container {
+    background-color: var(--third_accent_color);
+}
+
+div#Lower_Nav_Container {
+    background-color: var(--third_accent_color);
+}
+
+div.menu_header p, div.menu_header div.arrow, div.menu_content_container a, div.navobj a {
+    color: var(--text-color);
+    transition: color 0.5s, border 0.5s;
+}
+
+div.menu_header:hover div.arrow {
+    border: solid var(--Clear_water_blue);
+    border-width:0 3px 3px 0;
+}
+
+div.menu_header:hover .ncategory p, div.menu_content_container a:hover {
+    color:var(--Clear_water_blue) !important;
+}
+
+div.navobj:hover a{
+    color:var(--Clear_water_blue) !important;
+}
+
+@media screen and (max-width: 1000px) {
+    div.menu_content_container.activated {
+        background-color: var(--accent_color);
+        box-shadow: none !important;
+    }
+
+    .poked + .nav-phone {
+        color:var(--Crystal_blue);
+    }
+}
+
+/* Footer Personalization */
+
+div#finformation a {
+    color: var(--silver_accent);
+}
+
+div#webmaker p {
+    color: var(--metal_color);
+}
+
+/* Personalized */
+
+.active {
+    color: var(--Crystal_blue) !important;    
+}
+
+.arrow {
+    border: solid var(--text-color);
+    border-width:0 3px 3px 0;
+}
+
+/* Relocated to the css/navig_foot_lib.css file */
+
+/* Personalized Tag Changes */
+
+
+/* Home Page */
+
+div#homecontact a{
+    color:var(--Crystal_blue);
+}
+
+/* Sticker Page */
+
+div#title div#titlecover {
+    border-bottom: 0.5em solid var(--background-color);
+    background-color: var(--background-color);
+}
+
+div#title div#stickertext h1, div#title div#stickertext h3 {
+    text-shadow: 5px 7.5px 7.5px var(--background-color);
+}
+
+div.catalog-container {
+    background-color: var(--accent_color);
+}
+
+div.catalog-container div#showcase-container div.content-container {
+    background-color: var(--secondary_accent_color);
+    border-bottom: 0.55em solid var(--background-color);
+    border-right: 0.55em solid var(--background-color);
+    box-shadow: 0.1em 0.1em 0.2em var(--background-color);
+}
+
+div.catalog-container div#showcase-container div.content-container p a {
+    color:var(--Crystal_blue);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Arrows */
+
+.arrow {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius:25%;
+    padding:4px;
+    box-sizing:border-box;
+    margin-left:8px;
+}
+
+.down {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.up {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}

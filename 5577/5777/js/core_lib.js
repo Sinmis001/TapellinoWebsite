@@ -7,8 +7,12 @@ const PMi = document.createElement("i");
 
 const divpsr = document.createElement("div");
 const divportr = document.createElement("div");
-const CCFDiv = document.createElement("div");
+const Lower_Nav_ContainerDiv = document.createElement("div");
 const divlogocont = document.createElement("div");
+
+var dl = document.createElement("input");
+var settings = document.createElement("div");
+var settingseff = document.createElement("div");
 
 // Header Assembly 
 
@@ -26,7 +30,7 @@ function headerassembler() {
     } else {
         headerboy = document.getElementById("outdocpo");
     }
-    const csslinks = ['fontsinit.css', 'core.css', 'navigcore.css', 'footcore.css', 'colorpallet.css'];
+    const csslinks = ['fontsinit.css', 'main_stylesheet.css', 'navig_foot_lib.css', 'colorpallet.css', 'menu_lib.css'];
     var locationdiscovery = 'css/';
     if(typedoca || typedocb) {
         locationdiscovery = '../css/';
@@ -93,12 +97,12 @@ function navig(navparent) {
     }
 
     // Core Nav Divs Maker
-    const NCFDiv = document.createElement("div");
-    NCFDiv.setAttribute("id", "NCF");
-    navparent.appendChild(NCFDiv);
+    const Upper_Nav_ContainerDiv = document.createElement("div");
+    Upper_Nav_ContainerDiv.setAttribute("id", "Upper_Nav_Container");
+    navparent.appendChild(Upper_Nav_ContainerDiv);
 
-    CCFDiv.setAttribute("id", "CCF");
-    NCFDiv.appendChild(CCFDiv);
+    Lower_Nav_ContainerDiv.setAttribute("id", "Lower_Nav_Container");
+    Upper_Nav_ContainerDiv.appendChild(Lower_Nav_ContainerDiv);
 
     // The things that people use to go around the webspace 
 
@@ -106,11 +110,11 @@ function navig(navparent) {
     var ahome = document.createElement("a");
     var hometext = "Home";
     var homelink = "https://www.tapellino.com";
-    ahandler(CCFDiv, hometext, homelink, ahome);
+    amaker(Lower_Nav_ContainerDiv, hometext, homelink, ahome);
 
     // Products / Services Element
     var pstext = "Products / Services";
-    listhandler(CCFDiv, pstext, divpse, divpsr);
+    listheadermaker(Lower_Nav_ContainerDiv, pstext, divpse, divpsr, "pas");
 
     const anamelist = ['Exterior Signs', 'Interior Signs', '3D Signs', 'Illuminated Signs', 'Stickers', 'Banners', 'Digital Printing', 'Laser Cutting', 'Acrylic Fabrication'];
     const alinklist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'stickers', 'dprinting#banners', 'dprinting', 'lasercut', 'acrylicfab'];
@@ -125,7 +129,7 @@ function navig(navparent) {
 
     // Portfolio  Element
     var porttext = "Portfolio"
-    listhandler(CCFDiv, porttext, divporte, divportr);
+    listheadermaker(Lower_Nav_ContainerDiv, porttext, divporte, divportr, "pf");
 
     // Contact Element
     var acontact = document.createElement("a");
@@ -134,20 +138,70 @@ function navig(navparent) {
     if(typedoca || typedocb) {
         contactlink="../contact";
     }
-    ahandler(CCFDiv, contacttext, contactlink, acontact);
+    amaker(Lower_Nav_ContainerDiv, contacttext, contactlink, acontact);
     
     // Phone Menu Maker
     PMi.setAttribute("class", "fa fa-bars nav-phone");
-    NCFDiv.appendChild(PMi);
+    Upper_Nav_ContainerDiv.appendChild(PMi);
 
+    // On what page is the user on?
     const elelist = [ahome, acontact];
     const linkerlist = ['home', 'contact', 'linkylist'];
     const listlinkerlist = ['esigns', 'isigns', '3dsigns', 'ilsigns', 'stickers', 'dprinting#banners', 'dprinting', 'lasercut', 'acrylicfab'];
     activepagehandler(elelist, linkerlist, listlinkerlist);
 
+
+    // Settings maker
+
+    // settings_constructor(Lower_Nav_ContainerDiv, settings, settingseff);
 }
 
-function ahandler(parelement, elementtext, elementlink, aelement) {
+// Settings maker function
+function settings_constructor(parelement, settingsele, settings) {
+    settingsele.setAttribute("class", "menu_header");
+    parelement.appendChild(settingsele);
+
+    var settingstextbox = document.createElement("div");
+    settingstextbox.setAttribute("class", "nct settingscat");
+    settingsele.appendChild(settingstextbox);
+    
+    var textdiv = document.createElement("div");
+    textdiv.setAttribute("class", "settingscat");
+    settingstextbox.appendChild(textdiv);
+
+    var svgele = document.createElement("div");
+    svgele.setAttribute("class", "settings-icon");
+    settingstextbox.appendChild(svgele);
+
+    settings.setAttribute("class", "menu_content_container");
+    settingsele.appendChild(settings);
+
+    // Dark - Light mode maker
+    dark_light_constructor(settings, dl);
+    
+}
+
+// Dark - Light mode maker function
+function dark_light_constructor(parelement, input) {
+    var label, slider, input;
+    label = document.createElement("label");
+    label.setAttribute("class", "switch_container");
+
+    input.setAttribute("type", "checkbox");
+
+    slider = document.createElement("span");
+    slider.setAttribute("class", "slider");
+    
+    label.appendChild(input);
+    label.appendChild(slider);
+    parelement.appendChild(label);
+}
+
+dl.addEventListener("click", () => {
+    document.body.classList.toggle('dark');
+});
+
+function amaker(parelement, elementtext, elementlink, aelement) {
     var atext, divmaker;
     divmaker = document.createElement("div");
     divmaker.setAttribute("class", "navobj");
@@ -160,16 +214,16 @@ function ahandler(parelement, elementtext, elementlink, aelement) {
     parelement.appendChild(divmaker);
 }
 
-function listhandler(parelement, elementtext, identifier1, identifier2) {
+function listheadermaker(parelement, elementtext, identifier1, identifier2, specclass) {
     var topdiv = document.createElement("div");
-    topdiv.setAttribute("class", "nctab");
+    topdiv.setAttribute("class", "menu_header");
     parelement.appendChild(topdiv);
 
-    identifier1.setAttribute("class", "nct ncategory");
+    identifier1.setAttribute("class", "nct ncategory "+specclass);
     topdiv.appendChild(identifier1);
     
     var textdiv = document.createElement("div");
-    textdiv.setAttribute("class", "ncategory");
+    textdiv.setAttribute("class", "ncategory "+specclass);
     identifier1.appendChild(textdiv);
 
     var pelement = document.createElement("p");
@@ -181,7 +235,7 @@ function listhandler(parelement, elementtext, identifier1, identifier2) {
     arrowdiv.setAttribute("class", "arrow down");
     textdiv.appendChild(arrowdiv);
 
-    identifier2.setAttribute("class", "flex-navig");
+    identifier2.setAttribute("class", "menu_content_container");
     topdiv.appendChild(identifier2);
 }
 
@@ -234,83 +288,110 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
     }
 }
 
-// Nav event handler for onclick events and mouseenter and on events
+// What do i do when someone is going over or clicks on an element that can expand with more options
+var tabportclic = divporte;
+var tabprodclic = divpse;
+var pmclic = PMi;
 
-var tabporte = divporte;
-var tabprode = divpse;
-var phonemenu = PMi;
+var tabprodeff = divpsr;
+var tabporteff = divportr;
+var pmeff = Lower_Nav_ContainerDiv;
+var hidelogo = divlogocont;  
 
-var tabprodr = divpsr;
-var tabportr = divportr;
-var phonemenur = CCFDiv;
-var mobilecombatlogo = divlogocont;
-
-tabprode.addEventListener('mouseenter', menuhandler(tabprodr, tabprode));
-tabporte.addEventListener('mouseenter', menuhandler(tabportr, tabporte));
+tabprodclic.addEventListener('mouseenter', menuhandler(tabprodeff, tabprodclic));
+tabportclic.addEventListener('mouseenter', menuhandler(tabporteff, tabportclic));
 
 function menuhandler(object, listener) {
     listener.addEventListener('mouseenter', e => {
-        object.setAttribute("class", "flex-navig triggered");
+        object.setAttribute("class", "menu_content_container activated");
         object.addEventListener('mouseenter', a => {
-            object.setAttribute("class", "flex-navig triggered");
+            object.setAttribute("class", "menu_content_container activated");
         });
     });
     listener.addEventListener('mouseleave', e => {
-        object.setAttribute("class", "flex-navig ");
+        object.setAttribute("class", "menu_content_container ");
         object.addEventListener('mouseleave', a => {
-            object.setAttribute("class", "flex-navig ");
+            object.setAttribute("class", "menu_content_container ");
         });
     });
 }
 
-var statustpd=0;
-tabprode.onclick = s => {
-    if(statustpd == 0) {
-        tabprodr.setAttribute("class", "flex-navig triggered");
-        statustpd=1;
-    } else {
-        tabprodr.setAttribute("class", "flex-navig ");
-        statustpd=0;
-    }
-}
-
-var statustpt=0;
-tabporte.onclick = x => {
-    if(statustpt == 0) {
-        tabportr.setAttribute("class", "flex-navig triggered");
-        statustpt=1;
-    } else {
-        tabportr.setAttribute("class", "flex-navig ");
-        statustpt=0;
-    }
-}
-
 var status=0;
-phonemenu.onclick = z => {
-    if(status==0) {
-        phonemenur.setAttribute("class", "poked");
-        mobilecombatlogo.setAttribute("style", "display:none;");
-        status=1;
+var firstfire=0;
+
+tabprodclic.addEventListener('click', () => {menuonclickeff(null, null, null, tabprodeff, "menu_content_container", "activated", null, null, null)});
+tabportclic.addEventListener('click', () => {menuonclickeff(null, null, null, tabporteff, "menu_content_container", "activated", null, null, null)});
+pmclic.addEventListener('click', () => {menuonclickeff(null, null, null, pmeff, "", "poked", hidelogo, "", "hide")});
+settings.addEventListener('click', () => {menuonclickeff(null, null, null, settingseff, "menu_content_container", "activated", null, null, null)});
+
+// Note: activated displays menu designed for navigation; elevated is for mobile compatibility menu; poked is how mobile compatibility menu get's some of it's properties
+
+function menuonclickeff(clicked, clickedorigclass, clickedaddclass, effected, effectedorigclass, effectedaddclass, effected2, effected2origclass, effected2addclass) {
+    if(effected2==null || effected2==undefined) {
+        if(clicked==null || clicked==undefined) {
+            if(status == 0) {
+                effected.setAttribute("class", effectedorigclass+" "+effectedaddclass);
+                status=1;
+                return 0;
+            } else {
+                effected.setAttribute("class", effectedorigclass);
+                status=0;
+                return 0;
+            }
+        } else {
+            if(status == 0) {
+                effected.setAttribute("class", effectedorigclass+" "+effectedaddclass);
+                clicked.setAttribute("class", clickedorigclass+" "+clickedaddclass);
+                status=1;
+                console.log(status);
+            } else {
+                effected.setAttribute("class", effectedorigclass);
+                clicked.setAttribute("class", clickedorigclass);
+                status=0;
+                return 0;
+            }
+        }
     } else {
-        phonemenur.setAttribute("class", "");
-        mobilecombatlogo.setAttribute("style", "");
-        status=0;
+        if(clicked==null || clicked==undefined) {
+            if(status == 0) {
+                effected.setAttribute("class", effectedorigclass+" "+effectedaddclass);
+                effected2.setAttribute("class", effected2origclass+" "+effected2addclass);
+                status=1;
+                return 0;
+            } else {
+                effected.setAttribute("class", effectedorigclass);
+                effected2.setAttribute("class", effected2origclass);
+                status=0;
+                return 0;
+            }
+        } else {
+                if(status == 0) {
+                effected.setAttribute("class", effectedorigclass+" "+effectedaddclass);
+                effected2.setAttribute("class", effected2origclass+" "+effected2addclass);
+                clicked.setAttribute("class", clickedorigclass+" "+clickedaddclass);
+                status=1;
+                return 0;
+            } else {
+                effected.setAttribute("class", effectedorigclass);
+                effected2.setAttribute("class", effected2origclass);
+                clicked.setAttribute("class", clickedorigclass);
+                status=0;
+                return 0;
+            }
+        }
     }
-};
-
-
-
+}
 
 // Footer constructor
 
 function footerconstructor() {
     const footerid = document.getElementById("footerid");
     
-    // Location Handler
+    // Where in the website i am located...?
     var typedoca = document.getElementById("outdocps");
     var typedocb = document.getElementById("outdocpo");
 
-    // copyrights
+    // Copyright section constructor
     const copydiv = document.createElement("div");
     copydiv.setAttribute("id", "copyright");
     footerid.appendChild(copydiv);
@@ -352,11 +433,12 @@ function footerconstructor() {
     footerid.appendChild(webmdiv);
 
     const webmp = document.createElement("p");
-    const webmptext = document.createTextNode("Made by SinmisDev");
+    const webmptext = document.createTextNode("Made by CyDCo");
     webmp.appendChild(webmptext);
     webmdiv.appendChild(webmp);
 }
 
+// Handler for expanding list elements
 function widemaker(parelement, listname, listlink, folderdoc) {
     var lnum, amake, atext;
     for(lnum=0; lnum<listlink.length; lnum++) {
@@ -368,20 +450,45 @@ function widemaker(parelement, listname, listlink, folderdoc) {
     }
 }
 
-function errorcatcher(functionchecker) {
-    try {
-        functionchecker();
+// Some scripts are required for the page to load but not after it has loaded so we removed them to make the page lighter
+function remove_unwanted_scripts() {
+    var delscriptele = document.getElementsByClassName("delonload");
+    for(var i=0; i<delscriptele.length; i++) {
+        delscriptele[i].remove();
     }
-    catch(error) {
-        console.error(error);
-    }
-
 }
 
-function initalizer() {
+// Scrollbar window size handler
+function scrollbarhandler() {
+    var scrollbarwidth = window.innerWidth - document.documentElement.clientWidth;
+    var coreelements = [document.getElementById("mainid"), document.getElementById("headerid"), document.getElementById("footerid")];
+    var lnum;
+    for(lnum=0; lnum<coreelements.length; lnum++) {
+        coreelements[lnum].setAttribute("style", "margin-right: "+scrollbarwidth+"px;");
+    } 
+}
+
+var bodyhasscrollbar = function() {
+    return window.innerHeight < document.body.scrollHeight;
+}
+
+function checkforscrollbarandact() {
+    if(bodyhasscrollbar()==true) {
+        scrollbarhandler();
+    }
+}
+
+// Just in case the user decides he will resize or move the page to a smaller or bigger screen
+window.addEventListener('resize', checkforscrollbarandact);
+
+// Initializer
+
+function initializer() {
+    errorcatcher(headerassembler);
     errorcatcher(navloader);
     errorcatcher(footerconstructor);
-    errorcatcher(headerassembler);
+    checkforscrollbarandact();
+    remove_unwanted_scripts();
 }
 
-document.body.onload = initalizer;
+document.body.onload = initializer;

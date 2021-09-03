@@ -1,0 +1,16 @@
+div#title {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+}
+
+div#previousjob {
+    width: 100%;
+    position: relative;
+}
+
+div#previousjob img {
+    width: 100%;
+    position: relative;
+}

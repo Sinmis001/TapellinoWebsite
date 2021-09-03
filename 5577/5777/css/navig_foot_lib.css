@@ -1,3 +1,126 @@
+/* Footer CSS */
+
+footer {  
+    position: relative;
+    height:8vh;
+    z-index:1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer #copyright {
+    font-size:1.1em;
+    min-width: 140px;
+    height:inherit;
+    display: flex;
+    flex:1 1 auto;
+    align-items: center;
+    margin-left:0.5em;
+}
+
+footer #copyright p{
+    margin:0;
+    padding:0;
+}
+
+footer #copyright #copyshort {
+    display: none;
+}
+
+footer div#webmaker {
+    font-size:1em;
+    min-width: 80px;
+    height:inherit;
+    display: flex;
+    flex:1 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer div#webmaker p {
+    margin: 0;
+    padding: 0;
+    padding-right: 0.65em;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+footer div#finformation {
+    display: none;
+}
+
+
+footer div#finformation {
+    font-size: 0.9em;
+    text-align: center;
+    min-width: 140px;
+    height:inherit;
+    display: flex;
+    flex:1 1 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div#finformation a {
+    margin:0;
+    margin-left:2.5em;
+    margin-right:2.5em;
+    padding:0;
+}
+
+
+
+@media screen and (max-width:1450px) {
+    footer #copyright p {
+        font-size:1em;
+    }
+
+    footer #webmaker p {
+        font-size:0.8em;
+    }
+
+    footer #finformation p {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width:750px) {
+
+    footer #copyright {
+        margin-left:0.35em;
+    }
+
+    footer #copyright #copyshort {
+        display: flex;
+    }
+
+    footer #copyright #copyshort p {
+        font-size: 0.8em;
+    }
+    
+    footer #copyright #copynormal {
+        display: none;
+    }
+
+    footer #webmaker p {
+        font-size:0.8em;
+    }
+
+    
+    footer #finformation p {
+        font-size: 0.75em;
+        margin-left:0.25em;
+        margin-right:0.25em;
+    }
+
+}
+
+/* Navigation CSS */
+
 /* Standard Navigation */
 nav {
     z-index: 999;
@@ -10,7 +133,20 @@ nav {
     align-items: center;
 }
 
-div#CCF, div#NCF {
+nav * {
+    font-size: 2.25vmin;
+    z-index:999;
+    position: relative;
+}
+
+nav a {
+    margin:0;
+    padding:0;
+	position:relative;
+}
+
+/* Formerly #CCF, #NCF */
+div#Lower_Nav_Container, div#Upper_Nav_Container {
     width: 100%;
     height: inherit;
     display: flex;
@@ -18,12 +154,7 @@ div#CCF, div#NCF {
     justify-content: flex-end;
 }
 
-nav * {
-    font-size: 1.05em;
-    z-index:999;
-    position: relative;
-}
-
+/* Logo Container CSS */
 div#logo_container {
     width:auto;
     margin:0;
@@ -50,47 +181,13 @@ img#logo::before {
     box-sizing: border-box;
 }
 
-nav a {
-    margin:0;
-    padding:0;
-	position:relative;
-}
-
-/* Standard Menu Reaction */
-
-div.nctab {
-    display:flex;
-    flex-direction: column;
+/* Menu Decoration */
+.menu_header:first-child {
     justify-content: center;
     align-items: center;
 }
 
-div.flex-navig {
-    display: none;
-}
-
-div.flex-navig.triggered {
-    max-width: 450px;
-    max-height: 1700px;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex: 1 1 auto;
-    align-items: flex-start;
-    position: absolute;
-    top:8vh;
-}
-
-/* Standard Menu Personalization */
-
-
-.nctab:first-child {
-    justify-content: center;
-    align-items: center;
-}
-
-div.flex-navig a {
+div.menu_content_container a {
     max-width: 450px;
     min-width: 30px;
     max-height: 170px;
@@ -124,10 +221,10 @@ i.nav-phone {
 
 /* Phone Menu CSS */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 
     nav * {
-        font-family: VRSemiBold;
+        font-weight: 600;
         font-size: 1.10em !important;
     }
 
@@ -145,11 +242,11 @@ i.nav-phone {
         font-size:30px !important;
     }
 
-    div#CCF {
+    div#Lower_Nav_Container {
         display: none !important;
     }
 
-    div#CCF.poked, div#NCF {
+    div#Lower_Nav_Container.poked, div#Upper_Nav_Container {
         position: absolute;
         max-height: 1000px;
         min-height: 40px;
@@ -160,7 +257,7 @@ i.nav-phone {
         flex-direction: column !important;
         align-items: flex-start;
     }
-    div#CCF.poked {
+    div#Lower_Nav_Container.poked {
         top:6.5vh;        
     }
 
@@ -183,25 +280,25 @@ i.nav-phone {
         padding:0 !important;
     }
 
-    .nctab {
+    .menu_header {
         padding-left:0.65em;
     }
 
-    div.flex-navig.triggered {
+    div.menu_content_container.activated {
         width:100% !important;
         top:0px !important;
         position: relative;
     }
 
-    div.flex-navig.triggered a {
-        font-family: VRRegular !important;
+    div.menu_content_container.activated a {
+        font-weight: 500;
         font-size: 1.025em !important;
         padding-left: 0.75em;
     }
 
     .active {
         font-size: 1.15em !important;
-        font-family: VRBold;
+        font-weight: 700;
     }
 
     .ncategory p {
@@ -237,23 +334,35 @@ i.nav-phone {
 
 /* Personalization */
 .active {
-    font-size: 1.10em;
+    font-size: 2.4vmin;
     
 }
 
 .navobj, .ncategory {
-    max-width: 400px;
-    min-width: 100px;
-    max-height: 200px;
-    min-height: 10px;
+    width:13.5vmin;
+    height:100%;
     display:flex;
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     justify-content: center;
     align-items: center;
     text-align:center;
-    height:100%;
     margin-top:auto;
     margin-bottom:auto;
-    padding-left: 0.15em;
-    padding-right: 0.15em;
+    padding-left: 0.15vmin;
+    padding-right: 0.15vmin;
+    cursor:pointer;
+}
+
+.ncategory p {
+    margin:0;
+    padding:0;
+}
+
+.pf p {
+    margin-top:0.3vmin;
+}
+
+.pas {
+    width:27vmin;
+    margin-right: 1.25vmin;
 }
