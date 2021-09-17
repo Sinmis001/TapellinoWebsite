@@ -1,0 +1,268 @@
+div#title {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+}
+
+div#title img {
+    width: 100%;
+    position: relative;
+}
+
+div#title div#stickertext {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top:0;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+div#title div#stickertext h1 {
+    font-size: 7em;
+    font-weight: 500;
+    font-family: Enso !important;
+    letter-spacing: 0.1em;
+}
+
+div#title div#titlecover {
+    width: 100%;
+    height: 50%;
+    top:50%;
+    position: absolute;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+}
+
+div#title div#titlecover div#covertext {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+div#title div#titlecover div#covertext h3 {
+    font-size: 2.25em;
+    font-weight: 200;
+    letter-spacing: 0.125em;
+}
+
+div#catalog {
+    width:100%;
+    height:125vh;
+    position: relative;
+    display: flex;
+    flex:0 0 auto;
+    justify-content: center;
+}
+
+div#catalog div#catalogtext {
+    width:100%;
+    height:30%;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+}
+
+div#catalog div#catalogtext h2 {
+    font-size: 5.75em;
+    font-weight: 200;
+    letter-spacing: 0.125em;
+}
+
+div#catalog div#catalogcontent {
+    width:95%;
+    height:70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    position: absolute;
+    top:30%;
+    box-sizing: border-box;
+    padding-bottom: 3.5em;
+}
+
+div#catalog div#catalogcontent div.content {
+    position: relative;
+    border-radius: 10%;
+}
+
+div#catalog div#catalogcontent div.content div {
+    position: relative;
+    top:15%;
+    display: flex;
+    justify-content: center;
+}
+
+div#catalog div#catalogcontent div.content img {
+    width:90%;
+}
+
+div#catalog div#catalogcontent div.content h1 {
+    position: absolute;
+    display: inline;
+    top:100%;
+    font-size: 2.25em;
+    font-weight: 400;
+    letter-spacing: 0.125em;
+}
+
+div#catalog div#catalogcontent div.content p {
+    position: absolute;
+    display: inline;
+    width:90%;
+    top:135%;
+    font-size: 0.95em;
+    letter-spacing: 0.125em;
+    text-align: center;
+}
+
+@media screen and (max-width:1400px) {
+    div#catalog div#catalogcontent div.content h1 {
+        position: absolute;
+        display: inline;
+        top:100%;
+        font-size: 1.5em;
+        font-weight: 400;
+        letter-spacing: 0.125em;
+    }
+    
+    div#catalog div#catalogcontent div.content p {
+        position: absolute;
+        display: inline;
+        top:135%;
+        font-size: 0.65em;
+        letter-spacing: 0.125em;
+    }
+}
+
+div#impinfo {
+    width:100%;
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#impinfo p {
+    margin:0;
+    padding:0;
+    width:90%;
+    display: inline;
+    font-size: 0.9em;
+    letter-spacing: 0.125em;
+}
+
+div#impinfo i {
+    display: inline;
+    font-weight: 700;
+    font-size: 1.15em;
+    letter-spacing: 0.125em;
+}
+
+@media screen and (max-width: 1000px) {
+    div#title div#stickertext h1 {
+        font-size: 3.5em;
+    }
+
+    div#title div#titlecover div#covertext h3 {
+        font-size: 0.75em;
+        font-weight: 100;
+    }
+
+    div#catalog {
+        width:100%;
+        height:125vh;
+        position: relative;
+        display: flex;
+        flex:0 0 auto;
+        justify-content: center;
+    }
+    
+    div#catalog div#catalogtext {
+        width:100%;
+        height:10%;
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:0;
+    }
+    
+    div#catalog div#catalogtext h2 {
+        font-size: 2em;
+        font-weight: 200;
+        letter-spacing: 0.125em;
+    }
+    
+    div#catalog div#catalogcontent {
+        width:95%;
+        height:90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 1em;
+        row-gap: 1em;
+        top:10%;
+        box-sizing: border-box;
+        padding-bottom: 1.5em;
+    }
+
+    div#catalog div#catalogcontent div.content {
+        border-radius: 7.5%;
+    }
+
+    div#catalog div#catalogcontent div.content div {
+        top:5%;
+    }
+
+    div#catalog div#catalogcontent div.content img {
+        width:85%;
+    }
+    
+    div#catalog div#catalogcontent div.content h1 {
+        top:75%;
+        font-size: 1.05em;
+        font-weight: 400;
+        letter-spacing: 0.125em;
+    }
+    
+    div#catalog div#catalogcontent div.content p {
+        width:85%;
+        top:110%;
+        font-size: 0.6em;
+        letter-spacing: 0.125em;
+    }
+
+    div#impinfo {
+        width:100%;
+        height:18vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    div#impinfo p {
+        font-size: 0.8em;
+        letter-spacing: 0.125em;
+    }
+    
+    div#impinfo i {
+        font-weight: 700;
+        font-size: 1em;
+        letter-spacing: 0.125em;
+    }
+}

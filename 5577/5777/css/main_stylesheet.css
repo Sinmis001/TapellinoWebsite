@@ -22,6 +22,7 @@ body {
     --dark_silver_accent: #777777;
     --Crystal_blue: #00add8;
     --Clear_water_blue: #1082e0;
+    --Light-Blue: #3bd4f7;
     
     width:100vw;
     height:100vh;
@@ -172,7 +173,7 @@ div.catalog-container div#showcase-container div.content-container {
 }
 
 div.catalog-container div#showcase-container div.content-container p a {
-    color:var(--Crystal_blue);
+    color:var(--Light-Blue);
 }
 
 a {

@@ -1,11 +1,130 @@
 /* Main Color Kit */
-
+/* Std White | #ffffff */
+/* Black matt 1 | #101010 */
+/* Black matt 2 | #202020 */
+/* Silver Grey | #afafaf */
+/* Crystal Blue | #00add8 */
+/* Bright Red | #ff0000 */
 
 /* HTML Standard Document */
 
+* {
+    color: #ffffff;
+}
+
+body {
+    background-color: #101010;
+}
+
+header {
+    background-color: #202020;
+}
+
+footer {
+    background-color: #202020;
+}
+
 /* Navigation Personalization */
 
+div.flex-navig.triggered {
+    background-color: #202020;
+    box-shadow: 2px 3px 0px rgba(175, 175, 175, 0.2);
+}
 
+.nav-header {
+    background-color: #404040;
+}
+
+div#NCF {
+    background-color: #202020;
+}
+
+div#CCF {
+    background-color: #202020;
+}
+
+div.nctab p, div.nctab div.arrow, div.flex-navig a, div.navobj a {
+    color:#ffffff;
+    transition: color 0.5s, border 0.5s;
+}
+
+div.nctab:hover div.arrow {
+    border: solid #1082e0;
+    border-width:0 3px 3px 0;
+}
+
+div.nctab:hover .ncategory p, div.flex-navig a:hover {
+    color:#1082e0 !important;
+}
+
+div.navobj:hover a{
+    color:#1082e0 !important;
+}
+
+@media screen and (max-width: 1000px) {
+    div.flex-navig.triggered {
+        background-color: #202020;
+        box-shadow: none !important;
+    }
+
+    .poked + .nav-phone {
+        color:#0dcfff;
+    }
+}
+
+/* Footer Personalization */
+
+div#finformation a {
+    color: #999999;
+}
+
+div#webmaker p {
+    color: #a5a5a5;
+}
+
+/* Personalized */
+
+.active {
+    color: #00add8 !important;    
+}
+
+.arrow {
+    border: solid #ffffff;
+    border-width:0 3px 3px 0;
+}
 
 /* Per page */
 
+/* Sticker Page */
+
+div#title div#titlecover {
+    box-shadow: 0 -10em 20em #101010;
+    border-bottom: 0.25em solid #404040;
+    background-color: #101010;
+}
+
+div#title div#stickertext h1 {
+    text-shadow: 10px 10px 5px #101010;
+}
+
+div#catalog {
+    border-top: 0.4em solid #404040;
+    border-bottom: 0.4em solid #404040;
+    background-color: #202020;
+}
+
+div#catalog div#catalogtext h2 {
+    text-shadow: 10px 10px 5px #101010;
+}
+
+div#catalog div#catalogcontent div.content {
+    background-color: #404040;
+}
+
+div#catalog div#catalogcontent div.content p a {
+    color:#00add8;
+}
+
+div#impinfo i {
+    color: #aa0000;
+}

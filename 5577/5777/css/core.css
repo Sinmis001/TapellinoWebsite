@@ -1,0 +1,64 @@
+/* HTML Standard Document */
+* {
+    font-family: VRRegular, Arial, Helvetica, sans-serif;
+}
+
+html {
+    margin:0;
+    padding:0;  
+}
+
+body {
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index:1;
+    margin:0;
+    padding:0;
+}
+
+header {
+    position: relative;
+    height: 10vh;
+    z-index:999;
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    height: auto;
+    z-index:1;
+    box-sizing: border-box;
+}
+
+/* Footer */
+
+/* Relocated to the css/footer.css file */
+
+/* Personalized Tag Changes */
+
+a {
+    text-decoration: none;
+}
+
+/* Arrows */
+
+.arrow {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius:25%;
+    padding:4px;
+    box-sizing:border-box;
+    margin-left:8px;
+}
+
+.down {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.up {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}

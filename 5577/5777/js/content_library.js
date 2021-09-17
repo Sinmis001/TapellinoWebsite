@@ -23,7 +23,7 @@ function showcase_constructor(piclinks, picheads) {
             const disclaimerlink = document.createElement("a");
             disclaimerlinktext = document.createTextNode("here");
             disclaimerlink.appendChild(disclaimerlinktext);
-            disclaimerlink.setAttribute("href", "../contant#location");
+            disclaimerlink.setAttribute("href", "../contact#location");
             disclaimertext.appendChild(disclaimerlink);
         contentdiv.appendChild(disclaimertext);
 
