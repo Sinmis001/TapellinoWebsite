@@ -140,14 +140,18 @@ div#impinfo i {
 
 /* Mobile combat */
 
-div.catalog-container div#showcase-container {
-    grid-template-columns: 22vmin 22vmin 22vmin 22vmin;
-    gap:1vw;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
-}
+@media screen and (max-width: 1000px) {
 
-div.catalog-container div#showcase-container div.content-container {
-    height:22vmin;
-    flex: 1 1 8.75vmin;
+    div.catalog-container div#showcase-container {
+        grid-template-columns: 22vmin 22vmin 22vmin 22vmin;
+        gap:1vw;
+        padding-top: 3.5%;
+        padding-bottom: 3.5%;
+    }
+
+    div.catalog-container div#showcase-container div.content-container {
+        height:22vmin;
+        flex: 1 1 8.75vmin;
+    }
+
 }
