@@ -32,6 +32,9 @@ body {
     margin:0;
     padding:0;
     background-color:var(--background-color);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
 }
 
 body.light {
@@ -203,4 +206,13 @@ a {
 .up {
     -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
+}
+
+/* Links */
+:link {
+    color:var(--Clear_water_blue);
+}
+
+:visited {
+    color:var(--Crystal_blue);
 }

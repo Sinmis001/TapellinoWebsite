@@ -47,6 +47,7 @@ div.catalog-container div#showcase-container {
     padding-bottom: 5.5em;
     margin-left:5%;
     margin-right: 5%;
+    justify-content: center;
 }
 
 div.catalog-container div#showcase-container div.content-container {
@@ -93,7 +94,7 @@ div.catalog-container div#showcase-container div.content-container h1 {
     width: 90%;
     text-align: center;
     top:100%;
-    font-size: 2.5vmin;
+    font-size: 2.25vmin;
     font-weight: 400;
     letter-spacing: 0.1vmin;
     margin:0;
@@ -135,4 +136,18 @@ div#impinfo i {
     font-weight: 700;
     font-size: 1.15em;
     letter-spacing: 0.125em;
+}
+
+/* Mobile combat */
+
+div.catalog-container div#showcase-container {
+    grid-template-columns: 22vmin 22vmin 22vmin 22vmin;
+    gap:1vw;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+}
+
+div.catalog-container div#showcase-container div.content-container {
+    height:22vmin;
+    flex: 1 1 8.75vmin;
 }

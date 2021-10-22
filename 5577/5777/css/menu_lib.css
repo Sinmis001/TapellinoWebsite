@@ -98,5 +98,5 @@ input:checked + .slider:before {
 
 /* hide class */
 .hide {
-    display: none;
+    display: none !important;
 }
