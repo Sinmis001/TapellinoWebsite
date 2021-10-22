@@ -1,9 +1,9 @@
 div.catalog-container {
     width:100%;
-    height:auto;
+    min-height: 10vmin;
     position: relative;
     display: flex;
-    flex:1 1 auto;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
 }
@@ -38,26 +38,43 @@ div.catalog-container div.catalog-text h5 {
 
 div.catalog-container div#showcase-container {
     width:90%;
-    height:60%;
+    height:80%;
     display: grid;
-    grid-template-columns: 23vmin 23vmin 23vmin 23vmin 23vmin;
-    column-gap: 12vmin;
+    grid-template-columns: 32vmin 32vmin 32vmin 32vmin 32vmin;
+    gap:0.75vw;
     box-sizing: border-box;
-    padding-bottom: 3.5em;
+    padding-top: 5.5em;
+    padding-bottom: 5.5em;
     margin-left:5%;
     margin-right: 5%;
 }
 
 div.catalog-container div#showcase-container div.content-container {
     position: relative;
-    border-radius: 2.5vmin;
-    width:23vmin;
-    height:23vmin;
-    display: flex;
+    height:32vmin;
+    border-radius: 0.75vmin;
+    display: inline-flex;
     flex-direction: column;
-    flex: 0 0 23vmin;
+    flex: 1 1 17.5vmin;
     justify-content: center;
     align-items: center;
+}
+
+div.catalog-container div#showcase-container .wide-tile {
+    grid-column: span 2;
+}
+
+div.catalog-container div#showcase-container .wide-tile img {
+    width:75% !important;
+}
+
+div.catalog-container div#showcase-container .long-tile {
+    grid-row: span 2;
+}
+
+div.catalog-container div#showcase-container .normal-tile {
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
 div.catalog-container div#showcase-container div.content-container div {
@@ -96,92 +113,6 @@ div.catalog-container div#showcase-container div.content-container p {
     padding-top:0.01em;
 }
 
-@media screen and (max-width: 1000px) {
-
-    div.catalog-container {
-        width:100%;
-        height:125vh;
-        position: relative;
-        display: flex;
-        flex:0 0 auto;
-        justify-content: center;
-    }
-    
-    div.catalog-container div#catalogtext {
-        width:100%;
-        height:10%;
-        display: flex;
-        flex: 0 0 auto;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top:0;
-    }
-    
-    div.catalog-container div#catalogtext h2 {
-        font-size: 2em;
-        font-weight: 200;
-        letter-spacing: 0.125em;
-    }
-    
-    div.catalog-container div#showcase-container {
-        width:95%;
-        height:90%;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        column-gap: 1em;
-        row-gap: 1em;
-        top:10%;
-        box-sizing: border-box;
-        padding-bottom: 1.5em;
-    }
-
-    div.catalog-container div#showcase-container div.content-container {
-        border-radius: 7.5%;
-    }
-
-    div.catalog-container div#showcase-container div.content-container div {
-        top:5%;
-    }
-
-    div.catalog-container div#showcase-container div.content-container img {
-        width:85%;
-    }
-    
-    div.catalog-container div#showcase-container div.content-container h1 {
-        top:75%;
-        font-size: 0.9em;
-        font-weight: 400;
-        letter-spacing: 0.125em;
-    }
-    
-    div.catalog-container div#showcase-container div.content-container p {
-        width:85%;
-        top:105%;
-        font-size: 0.5em;
-        letter-spacing: 0.125em;
-    }
-
-    div#impinfo {
-        width:100%;
-        height:18vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    div#impinfo p {
-        font-size: 0.8em;
-        letter-spacing: 0.125em;
-    }
-    
-    div#impinfo i {
-        font-weight: 700;
-        font-size: 1em;
-        letter-spacing: 0.125em;
-    }
-
-}
 div#impinfo {
     width:100%;
     height:10vh;

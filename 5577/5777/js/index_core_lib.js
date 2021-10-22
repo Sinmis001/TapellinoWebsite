@@ -12,10 +12,14 @@ function imghandler() {
 
 function rngimgsel() {
     var imgpaths = [
-        /* Exterior Signs */ ["portfolio/images/exteriorsigns/ex1.jpg", "portfolio/images/exteriorsigns/ex2.jpg", "portfolio/images/exteriorsigns/ex3.jpg", "portfolio/images/exteriorsigns/ex4.jpg", "portfolio/images/exteriorsigns/ex5.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg"],
-        /* Interior Signs */ ["portfolio/images/interiorsigns/in1.jpg", "portfolio/images/interiorsigns/in2.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg"],
-        /* 3D Signs */ ["portfolio/images/3dsigns/3d1.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg",],
-        /* Illuminated Signs */ ["portfolio/images/illuminatedisngs/ill1.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg"]
+        /* Exterior Signs */ 
+        ["portfolio/images/exteriorsigns/ex1.jpg", "portfolio/images/exteriorsigns/ex2.jpg", "portfolio/images/exteriorsigns/ex3.jpg", "portfolio/images/exteriorsigns/ex4.jpg", "portfolio/images/exteriorsigns/ex5.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg"],
+        /* Interior Signs */ 
+        ["portfolio/images/interiorsigns/in1.jpg", "portfolio/images/interiorsigns/in2.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg"],
+        /* 3D Signs */ 
+        ["portfolio/images/3dsigns/3d1.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg",],
+        /* Illuminated Signs */ 
+        ["portfolio/images/illuminatedisngs/ill1.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg", "images/welcomeheader.jpg"]
     ];
     var selimg, rngfamily, rngpic;
     rngfamily = rnggen(4);

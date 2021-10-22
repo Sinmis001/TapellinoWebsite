@@ -1,32 +1,90 @@
-// Produces showcases
+// Showcase function maker
 function showcase_constructor(piclinks, picheads) {
     const parelement = document.getElementById("showcase-container");
-    for(var i=0; i<piclinks.length; i++) {
-        // Create content div
-        const contentdiv = document.createElement("div");
-        contentdiv.setAttribute("class", "content-container");
+    var truearrlenght = piclinks[0].length;
+
+    // Validation incase there are no wide or long pictures
+    if(typeof piclinks[1] != 'undefined') {
+        truearrlenght += piclinks[1].length;
+    } else if(typeof piclinks[2] != 'undefined') {
+        truearrlenght += piclinks[2].length;
+    }
+    
+    var arrprogress=0, warrprogress=0, larrprogress=0;
+
+    for(let i=0; i<truearrlenght; i+=0) {
         
-        // image and text for the content div
-        const imag = document.createElement("img");
-        imag.setAttribute("src", piclinks[i]);
+        // Create content div
+        let contentdiv = document.createElement("div");
+        
+        // Skip default
+        var skip=false;
+
+        // Random picture order to make it look cool
+        var rngnum;
+        var imag = document.createElement("img");
+        var headelement = document.createElement("h1");
+        var headtext;
+
+        rngnum = rnggen(3);
+        var texttotran;
+        var imgtotran;
+
+        // What image this time
+        if(rngnum == 2 && typeof piclinks[2] != 'undefined' && larrprogress<piclinks[2].length) {
+            imgtotran = piclinks[2][larrprogress];
+            texttotran = picheads[2][larrprogress];
+            contentdiv.setAttribute("class", "content-container long-tile");
+            larrprogress+=1;
+            i++;
+            skip=true;
+        } else if(rngnum == 1 && typeof piclinks[1] != 'undefined' && warrprogress<piclinks[1].length) {
+            imgtotran =  piclinks[1][warrprogress];
+            texttotran = picheads[1][warrprogress];
+            contentdiv.setAttribute("class", "content-container wide-tile");
+            warrprogress+=1;
+            i++;
+            skip=true;
+        } else if(rngnum == 0 || rngnum == 1 || rngnum == 2 && skip!= true) {
+            imgtotran = piclinks[0][arrprogress];
+            texttotran = picheads[0][arrprogress];
+            contentdiv.setAttribute("class", "content-container normal-tile");
+            arrprogress+=1;
+            i++;
+        }
+
+        imag.setAttribute("src", imgtotran);
         imag.setAttribute("alt", "Display picture failed to load");
         contentdiv.appendChild(imag);
-
-        const headelement = document.createElement("h1");
-        const headtext = document.createTextNode(picheads[i]);
+        
+        
+        headtext = document.createTextNode(texttotran);
         headelement.appendChild(headtext);
         contentdiv.appendChild(headelement);
 
-        const disclaimertext = document.createElement("p");
-        const distext = document.createTextNode("*For pricing and sizes visit our shop ");
+        // Disclaimer Text
+        let disclaimertext = document.createElement("p");
+        let distext = document.createTextNode("*For pricing and sizes visit our shop ");
         disclaimertext.appendChild(distext);
-            const disclaimerlink = document.createElement("a");
+            let disclaimerlink = document.createElement("a");
             disclaimerlinktext = document.createTextNode("here");
             disclaimerlink.appendChild(disclaimerlinktext);
             disclaimerlink.setAttribute("href", "../contact#location");
             disclaimertext.appendChild(disclaimerlink);
         contentdiv.appendChild(disclaimertext);
 
-        parelement.appendChild(contentdiv);
+        // In the rare occurance that a div with undefined content shows up clear it
+        if(imgtotran == undefined || texttotran == undefined) {
+            // Clear undefined div for a clean user experience
+            contentdiv.remove();
+            console.warn = () => {};
+        } else {
+            parelement.appendChild(contentdiv);
+        }
     }
+}
+
+// rng producer
+function rnggen(max) {
+    return Math.floor(Math.random()*max);
 }

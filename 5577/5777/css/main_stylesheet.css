@@ -34,7 +34,7 @@ body {
     background-color:var(--background-color);
 }
 
-body.dark {
+body.light {
     /* Main Color Kit */
     --text-color: #333333;
     --background-color: #eeeeee;
@@ -150,26 +150,23 @@ div#homecontact a{
     color:var(--Crystal_blue);
 }
 
-/* Sticker Page */
+/* showcase_lib file coloring */
 
-div#title div#titlecover {
-    border-bottom: 0.5em solid var(--background-color);
-    background-color: var(--background-color);
+div.title h1 {
+    text-shadow: 0.075em 0.075em 5px var(--background-color);
 }
 
-div#title div#stickertext h1, div#title div#stickertext h3 {
-    text-shadow: 5px 7.5px 7.5px var(--background-color);
+div.title h3 {
+    text-shadow: 0.095em 0.095em 5px var(--background-color);
 }
 
 div.catalog-container {
-    background-color: var(--accent_color);
+    background-color: var(--third_accent_color);
 }
 
 div.catalog-container div#showcase-container div.content-container {
-    background-color: var(--secondary_accent_color);
-    border-bottom: 0.55em solid var(--background-color);
-    border-right: 0.55em solid var(--background-color);
-    box-shadow: 0.1em 0.1em 0.2em var(--background-color);
+    background-color: var(--background-color);
+    
 }
 
 div.catalog-container div#showcase-container div.content-container p a {
@@ -178,6 +175,13 @@ div.catalog-container div#showcase-container div.content-container p a {
 
 a {
     text-decoration: none;
+}
+
+/* p_us_universal file coloring */
+
+#cover {
+    border-bottom: 0.5em solid var(--background-color);
+    background-color: var(--background-color);
 }
 
 /* Arrows */

@@ -228,6 +228,10 @@ i.nav-phone {
         font-size: 1.10em !important;
     }
 
+    nav .ncategory p {
+        font-size: 0.9em !important;
+    }
+
     i.nav-phone {
         max-width: 125px;
         min-width: 50px;
@@ -287,7 +291,7 @@ i.nav-phone {
     div.menu_content_container.activated {
         width:100% !important;
         top:0px !important;
-        position: relative;
+        position: relative !important;
     }
 
     div.menu_content_container.activated a {

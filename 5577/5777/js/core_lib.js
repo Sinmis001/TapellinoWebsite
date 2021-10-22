@@ -30,7 +30,7 @@ function headerassembler() {
     } else {
         headerboy = document.getElementById("outdocpo");
     }
-    const csslinks = ['fontsinit.css', 'main_stylesheet.css', 'navig_foot_lib.css', 'colorpallet.css', 'menu_lib.css'];
+    const csslinks = ['fontsinit.css', 'main_stylesheet.css', 'navig_foot_lib.css', 'menu_lib.css'];
     var locationdiscovery = 'css/';
     if(typedoca || typedocb) {
         locationdiscovery = '../css/';
@@ -69,9 +69,9 @@ function logocontainer(navparent) {
     var typedoca = document.getElementById("outdocps");
     var typedocb = document.getElementById("outdocpo");
 
-    var logolocation = "images/tapellino.png";
+    var logolocation = "images/tapellino.svg";
     if(typedoca || typedocb) {
-        logolocation="../images/tapellino.png";
+        logolocation="../images/tapellino.svg";
     }
     divlogocont.setAttribute("id", "logo_container");
     navparent.appendChild(divlogocont);
@@ -127,9 +127,9 @@ function navig(navparent) {
     }
     listmaker(divpsr, anamelist, alinklist, pnamelist, foldloc);
 
-    // Portfolio  Element
-    var porttext = "Portfolio"
-    listheadermaker(Lower_Nav_ContainerDiv, porttext, divporte, divportr, "pf");
+    // Portfolio  Element ~ disabled no current plans
+    // var porttext = "Portfolio"
+    // listheadermaker(Lower_Nav_ContainerDiv, porttext, divporte, divportr, "pf");
 
     // Contact Element
     var acontact = document.createElement("a");
@@ -240,7 +240,7 @@ function listheadermaker(parelement, elementtext, identifier1, identifier2, spec
 }
 
 function listmaker(parelement, listname, listlink, plistname, folderloc) {
-    var lnum, llnum=0, amake, atext, pmake, ptext;
+    let lnum, llnum=0, amake, atext, pmake, ptext;
     for(lnum=0; lnum<listlink.length; lnum++) {
         if(lnum==0 || lnum==4) {
             pmake = document.createElement("p");
@@ -260,16 +260,16 @@ function listmaker(parelement, listname, listlink, plistname, folderloc) {
 
 function activepagehandler(elementlist, linkestlist, listlinkestlist) {
     const url = window.location.pathname.split('#')[0].split('/5577/5777/')
-    var lnum, llnum, validator=0;
+    let lnum, llnum, validator=0;
     for(lnum=0; lnum<linkestlist.length; lnum++) {
         if(linkestlist[lnum]=='linkylist') {
             for(llnum=0; llnum<listlinkestlist.length; llnum++) {
                 if(url[1]=="products&services/"+listlinkestlist[llnum]) {
-                    var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
+                    let activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
                     return 0;
                 } else if(url[1]=="portfolio/"+listlinkestlist[llnum]) {
-                    var activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
+                    let activea = document.querySelector("a[href='"+listlinkestlist[llnum]+"']");
                     activea.setAttribute("class", "active");
                     return 0;
                 } else if(llnum == (linkestlist.length-1)){
@@ -289,14 +289,14 @@ function activepagehandler(elementlist, linkestlist, listlinkestlist) {
 }
 
 // What do i do when someone is going over or clicks on an element that can expand with more options
-var tabportclic = divporte;
-var tabprodclic = divpse;
-var pmclic = PMi;
+let tabportclic = divporte;
+let tabprodclic = divpse;
+let pmclic = PMi;
 
-var tabprodeff = divpsr;
-var tabporteff = divportr;
-var pmeff = Lower_Nav_ContainerDiv;
-var hidelogo = divlogocont;  
+let tabprodeff = divpsr;
+let tabporteff = divportr;
+let pmeff = Lower_Nav_ContainerDiv;
+let hidelogo = divlogocont;  
 
 tabprodclic.addEventListener('mouseenter', menuhandler(tabprodeff, tabprodclic));
 tabportclic.addEventListener('mouseenter', menuhandler(tabporteff, tabportclic));
@@ -316,8 +316,8 @@ function menuhandler(object, listener) {
     });
 }
 
-var status=0;
-var firstfire=0;
+let status=0;
+let firstfire=0;
 
 tabprodclic.addEventListener('click', () => {menuonclickeff(null, null, null, tabprodeff, "menu_content_container", "activated", null, null, null)});
 tabportclic.addEventListener('click', () => {menuonclickeff(null, null, null, tabporteff, "menu_content_container", "activated", null, null, null)});
@@ -433,7 +433,7 @@ function footerconstructor() {
     footerid.appendChild(webmdiv);
 
     const webmp = document.createElement("p");
-    const webmptext = document.createTextNode("Made by CyDCo");
+    const webmptext = document.createTextNode("Made by SinmisDev");
     webmp.appendChild(webmptext);
     webmdiv.appendChild(webmp);
 }
