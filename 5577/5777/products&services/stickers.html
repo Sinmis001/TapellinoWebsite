@@ -30,7 +30,7 @@
                 </div>
                 <div id="cover">
                     <div class="catalog-container">
-                        <div id="showcase-container"></div>
+                        <div class="showcase-container"></div>
                         <script class="delonload">
                             showcase_constructor( 
                                 links=[
@@ -40,14 +40,32 @@
                                 heads=[
                                     ['For Sale Sticker', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon', 'Coming Soon'],
                                     ['Kawasaki Sticker']
-                                    ]
+                                    ],
+                                0,
+                                false
                             )
                         </script>
                     </div>
                 </div>     
             </div>
             <div class="information-panel">
-                <div>
+                <div class="catalog-container info-style">
+                    <div class="showcase-container"></div>
+                    <script class="delonload">
+                        showcase_constructor(
+                            links=[
+                                ['images/info/pricing.svg', 'images/info/quality.svg', 'images/info/warningstock.svg']
+                            ],
+                            heads=[
+                                ['Pricing varies between stickers/decals but it\'s always competitive', 'We only use one the best vinyls to produce your stickers/decals', 'We do not have all types of vinyl due to there being hundreads of types']
+                            ],
+                            1,
+                            false
+                        )
+                    </script>
+                </div>
+                
+                <!-- <div>
                     <h3>We do our best with the use of the latest technologies to produce high quality stickers at any size and shape for your needs</h3>
                     <img>
                 </div>
@@ -58,7 +76,7 @@
                 <div>
                     <h3></h3>
                     <img>
-                </div>
+                </div> -->
             </div>
         </main>
         <footer id="footerid">

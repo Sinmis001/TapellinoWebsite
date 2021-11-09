@@ -36,7 +36,7 @@ div.catalog-container div.catalog-text h5 {
     position: relative;
 }
 
-div.catalog-container div#showcase-container {
+div.catalog-container div.showcase-container {
     width:90%;
     height:80%;
     display: grid;
@@ -50,7 +50,7 @@ div.catalog-container div#showcase-container {
     justify-content: center;
 }
 
-div.catalog-container div#showcase-container div.content-container {
+div.catalog-container div.showcase-container div.content-container {
     position: relative;
     height:32vmin;
     border-radius: 0.75vmin;
@@ -61,35 +61,35 @@ div.catalog-container div#showcase-container div.content-container {
     align-items: center;
 }
 
-div.catalog-container div#showcase-container .wide-tile {
+div.catalog-container div.showcase-container .wide-tile {
     grid-column: span 2;
 }
 
-div.catalog-container div#showcase-container .wide-tile img {
+div.catalog-container div.showcase-container .wide-tile img {
     width:75% !important;
 }
 
-div.catalog-container div#showcase-container .long-tile {
+div.catalog-container div.showcase-container .long-tile {
     grid-row: span 2;
 }
 
-div.catalog-container div#showcase-container .normal-tile {
+div.catalog-container div.showcase-container .normal-tile {
     grid-column: span 1;
     grid-row: span 1;
 }
 
-div.catalog-container div#showcase-container div.content-container div {
+div.catalog-container div.showcase-container div.content-container div {
     position: relative;
     top:7.5%;
     display: flex;
     justify-content: center;
 }
 
-div.catalog-container div#showcase-container div.content-container img {
+div.catalog-container div.showcase-container div.content-container img {
     width:90%;
 }
 
-div.catalog-container div#showcase-container div.content-container h1 {
+div.catalog-container div.showcase-container div.content-container h1 {
     display: inline-block;
     width: 90%;
     text-align: center;
@@ -102,56 +102,81 @@ div.catalog-container div#showcase-container div.content-container h1 {
     margin-bottom:0.75vmin;
 }
 
-div.catalog-container div#showcase-container div.content-container p {
+div.catalog-container h4 {
     display: inline-block;
-    width:90%;
-    top:135%;
-    font-size: 1.5vmin;
+    width:100%;
+    font-size: 1.75vmin;
     letter-spacing: 0.1vmin;
     text-align: center;
     margin:0;
     padding:0;
     padding-top:0.01em;
+    padding-bottom: 0.95em;
 }
 
-div#impinfo {
-    width:100%;
-    height:10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Mobile Resolution */
 
-div#impinfo p {
-    margin:0;
-    padding:0;
-    width:90%;
-    display: inline;
-    font-size: 0.9em;
-    letter-spacing: 0.125em;
-}
+@media screen and (max-width:850px) and (orientation:portrait) {
 
-div#impinfo i {
-    display: inline;
-    font-weight: 700;
-    font-size: 1.15em;
-    letter-spacing: 0.125em;
-}
-
-/* Mobile combat */
-
-@media screen and (max-width: 1000px) {
-
-    div.catalog-container div#showcase-container {
-        grid-template-columns: 22vmin 22vmin 22vmin 22vmin;
-        gap:1vw;
-        padding-top: 3.5%;
-        padding-bottom: 3.5%;
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 22vmin 22vmin 22vmin 22vmin !important;
+        gap:1vw !important;
+        padding-top: 3.5% !important;
+        padding-bottom: 3.5% !important;
     }
 
-    div.catalog-container div#showcase-container div.content-container {
-        height:22vmin;
+    div.catalog-container div.showcase-container div.content-container {
+        height:22vmin !important;
+        flex: 1 1 8.75vmin !important;
+    }
+
+}
+
+@media screen and (max-width:1000px) and (orientation:landscape) {
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 26vmin 26vmin 26vmin 26vmin !important;
+        gap:1.25vw !important;
+        padding-top: 2.25em !important;
+        padding-bottom: 2.25em !important;
+    }
+
+    div.catalog-container div.showcase-container div.content-container {
+        height:26vmin !important;
+        flex: 1 1 8.75vmin !important;
+    }
+}
+
+/* Tablet Resolution */
+
+@media screen and (max-width:1000px) and (orientation:landscape) {
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 26vmin 26vmin 26vmin 26vmin;
+        gap:1.5vw;
+        padding-top: 2.25em;
+        padding-bottom: 2.25em;
+    }
+
+    div.catalog-container div.showcase-container div.content-container {
+        height:26vmin;
         flex: 1 1 8.75vmin;
     }
+}
+
+@media screen and (max-width:1240px) and (orientation:landscape) {
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 27vmin 27vmin 27vmin 27vmin 27vmin;
+        gap:1vw;
+        padding-top: 2.25em;
+        padding-bottom: 2.25em;
+    }
+
+    div.catalog-container div.showcase-container div.content-container {
+        height:27vmin;
+        flex: 1 1 8.75vmin;
+    }
+}
+
+/* Styles */
+div.catalog-container.info-style {
 
 }

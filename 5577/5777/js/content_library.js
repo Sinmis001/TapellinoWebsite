@@ -1,6 +1,6 @@
 // Showcase function maker
-function showcase_constructor(piclinks, picheads) {
-    const parelement = document.getElementById("showcase-container");
+function showcase_constructor(piclinks, picheads, num, disclaimer) {
+    const parelement = document.getElementsByClassName("showcase-container");
     var truearrlenght = piclinks[0].length;
 
     // Validation incase there are no wide or long pictures
@@ -62,8 +62,20 @@ function showcase_constructor(piclinks, picheads) {
         headelement.appendChild(headtext);
         contentdiv.appendChild(headelement);
 
-        // Disclaimer Text
-        let disclaimertext = document.createElement("p");
+        // In the rare occurance that a div with undefined content shows up clear it
+        if(imgtotran == undefined || texttotran == undefined) {
+            // Clear undefined div for a clean user experience
+            contentdiv.remove();
+            console.warn = () => {};
+        } else {
+            parelement[num].appendChild(contentdiv);
+        }
+    }
+
+    // Disclaimer Text if i say so
+    if(disclaimer==true) {
+        let topparent = document.getElementsByClassName("catalog-container");
+        let disclaimertext = document.createElement("h4");
         let distext = document.createTextNode("*For pricing and sizes visit our shop ");
         disclaimertext.appendChild(distext);
             let disclaimerlink = document.createElement("a");
@@ -71,20 +83,11 @@ function showcase_constructor(piclinks, picheads) {
             disclaimerlink.appendChild(disclaimerlinktext);
             disclaimerlink.setAttribute("href", "../contact#location");
             disclaimertext.appendChild(disclaimerlink);
-        contentdiv.appendChild(disclaimertext);
-
-        // In the rare occurance that a div with undefined content shows up clear it
-        if(imgtotran == undefined || texttotran == undefined) {
-            // Clear undefined div for a clean user experience
-            contentdiv.remove();
-            console.warn = () => {};
-        } else {
-            parelement.appendChild(contentdiv);
-        }
+        topparent[num].appendChild(disclaimertext);
     }
 }
 
-// rng producer
+// Random Number Generator
 function rnggen(max) {
     return Math.floor(Math.random()*max);
 }

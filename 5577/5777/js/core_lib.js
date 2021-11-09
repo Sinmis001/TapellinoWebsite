@@ -450,11 +450,12 @@ function widemaker(parelement, listname, listlink, folderdoc) {
     }
 }
 
-// Some scripts are required for the page to load but not after it has loaded so we removed them to make the page lighter
+// Some scripts are required for the page to load but not after it has loaded so we removed them to make the page code cleaner
 function remove_unwanted_scripts() {
-    var delscriptele = document.getElementsByClassName("delonload");
-    for(var i=0; i<delscriptele.length; i++) {
-        delscriptele[i].remove();
+    let delscriptele = document.getElementsByClassName("delonload");
+    let delscriptelenum = delscriptele.length;
+    for(let i=0; i<delscriptelenum; i++) {
+        delscriptele[0].remove();
     }
 }
 
@@ -488,7 +489,7 @@ function initializer() {
     errorcatcher(navloader);
     errorcatcher(footerconstructor);
     checkforscrollbarandact();
-    remove_unwanted_scripts();
+    setTimeout(remove_unwanted_scripts(), 1000);
 }
 
 document.body.onload = initializer;

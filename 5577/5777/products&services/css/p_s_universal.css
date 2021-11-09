@@ -19,7 +19,7 @@ div.title {
 
 div.title div.title-text h1 {
     position: absolute;
-    top:30%;
+    top:28%;
 
 }
 
@@ -60,34 +60,6 @@ div.information-panel img {
     width: 35%;
 }
 
-/* Smaller screen support */
-
-@media screen and (max-width: 1000px) {
-    div#title div#stickertext h1 {
-        font-size: 3.5em;
-    }
-
-    div.information-panel div {
-        width:100%;
-        flex-direction: column;
-    }
-
-    div.information-panel h3 {
-        font-size: 3vmin;
-        width: 90%;
-    }
-
-    div.title div.title-text h1 {
-        top:25%;
-    
-    }
-    
-    div.title div.title-text h3 {
-        top:23.5%;
-    }    
-
-}
-
 /* Per page text */
 
 #stickerpageimg {
@@ -124,6 +96,29 @@ div#stickerpagetext h3 {
     letter-spacing: 0.1em;
     padding:0;
     margin:0;
+    padding-bottom: 3em;
+}
+
+/* Smaller screen support */
+
+@media screen and (max-width: 1000px) {
+    div.title div#stickerpagetext.title-text h1 {
+        font-size: 11.5vmin;
+    }
+
+    div.title div.title-text h1 {
+        top:27%;
+    
+    }
+    
+    div.title div.title-text h3 {
+        top:23.5%;
+    }
+
+    div.title-text.title-indent {
+        left:4.5% !important;
+    }
+
 }
 
 /* Effect ids/classes */

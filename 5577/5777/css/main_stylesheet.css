@@ -167,12 +167,12 @@ div.catalog-container {
     background-color: var(--third_accent_color);
 }
 
-div.catalog-container div#showcase-container div.content-container {
+div.catalog-container div.showcase-container div.content-container {
     background-color: var(--background-color);
     
 }
 
-div.catalog-container div#showcase-container div.content-container p a {
+div.catalog-container h4 a {
     color:var(--Light-Blue);
 }
 

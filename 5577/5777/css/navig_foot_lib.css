@@ -167,8 +167,9 @@ div#logo_container {
 }
 
 div#logo_container a {
-    height:10vh;
-    display:inline-block;
+    height:8.5vmin;
+    display:flex;
+    flex: 0 0 5vmin;
 }
 
 img#logo {
@@ -233,18 +234,22 @@ i.nav-phone {
         font-size: 0.9em !important;
     }
 
+    div#logo_container a {
+        height:12vmin;
+    }
+
     i.nav-phone {
-        max-width: 125px;
-        min-width: 50px;
-        max-height: 125px;
-        min-height: 35px;
-        display: flex;
-        flex: 1 1 auto;
-        flex-direction: column;
-        justify-content: center;
+        display: flex ;
+        flex: 0 0 10vmin;
         align-items: center;
+        width:10vmin;
+        height:10vmin;
+        font-size:6vmin !important;
+        text-align: center;
+        vertical-align: middle;
         margin-left:auto;
-        font-size:30px !important;
+        margin-top:auto;
+        margin-bottom:auto;
     }
 
     div#Lower_Nav_Container {
@@ -267,8 +272,11 @@ i.nav-phone {
     }
 
     .poked + .nav-phone {
-        max-width:100% !important;
+        width:100% !important;
         margin-left:0 !important;
+        text-align: start;
+        padding-left:0.95rem !important;
+        box-sizing: border-box;
     }
     
     .navobj, .ncategory {
@@ -277,7 +285,7 @@ i.nav-phone {
         width:100% !important;
         flex: 1 0 auto;
         justify-content: flex-start !important;
-        padding-left:0.65em !important;
+        padding-left:0.95rem !important;
         box-sizing: border-box;
     }
 
