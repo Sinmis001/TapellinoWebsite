@@ -132,7 +132,7 @@ div.catalog-container h4 {
 
 }
 
-@media screen and (max-width:1000px) and (orientation:landscape) {
+@media screen and (max-width:500px) and (orientation:landscape) {
     div.catalog-container div.showcase-container {
         grid-template-columns: 26vmin 26vmin 26vmin 26vmin !important;
         gap:1.25vw !important;
@@ -142,6 +142,20 @@ div.catalog-container h4 {
 
     div.catalog-container div.showcase-container div.content-container {
         height:26vmin !important;
+        flex: 1 1 8.75vmin !important;
+    }
+}
+
+@media screen and (min-width:520px) and (max-width:1000px) and (orientation:landscape) {
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 28vmin 28vmin 28vmin 28vmin 28vmin !important;
+        gap:1.05vw !important;
+        padding-top: 2.25em !important;
+        padding-bottom: 2.25em !important;
+    }
+
+    div.catalog-container div.showcase-container div.content-container {
+        height:27vmin !important;
         flex: 1 1 8.75vmin !important;
     }
 }
@@ -162,7 +176,7 @@ div.catalog-container h4 {
     }
 }
 
-@media screen and (max-width:1240px) and (orientation:landscape) {
+@media screen and (max-width:1240px) and (orientation:landscape) and (max-height:750px) {
     div.catalog-container div.showcase-container {
         grid-template-columns: 27vmin 27vmin 27vmin 27vmin 27vmin;
         gap:1vw;
@@ -176,7 +190,45 @@ div.catalog-container h4 {
     }
 }
 
-/* Styles */
-div.catalog-container.info-style {
+/* Laptop & Desktop Resolutions */
+@media screen and (max-width:1420px) and (min-width:1140px) {
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 29vmin 29vmin 29vmin 29vmin 29vmin;
+        gap:0.95vw;
+        padding-top: 2.25em;
+        padding-bottom: 2.25em;
+    }
 
+    div.catalog-container div.showcase-container div.content-container {
+        height:29vmin;
+        flex: 1 1 8.75vmin;
+    }
+}
+
+@media screen and (width:1024px) and (height:768px), screen and (width:1280px) and (height:950px) {
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 29vmin 29vmin 29vmin 29vmin;
+        gap:0.95vw;
+        padding-top: 2.25em;
+        padding-bottom: 2.25em;
+    }
+
+    div.catalog-container div.showcase-container div.content-container {
+        height:29vmin;
+        flex: 1 1 8.75vmin;
+    }
+}
+
+@media screen and (width:1440px) and (height:900px), screen and (width:1680px) and (height:1050px), screen and (width:1920px) and (height:1200px) {
+    div.catalog-container div.showcase-container {
+        grid-template-columns: 27vmin 27vmin 27vmin 27vmin 27vmin;
+        gap:0.95vw;
+        padding-top: 2.25em;
+        padding-bottom: 2.25em;
+    }
+
+    div.catalog-container div.showcase-container div.content-container {
+        height:27vmin;
+        flex: 1 1 8.75vmin;
+    }
 }

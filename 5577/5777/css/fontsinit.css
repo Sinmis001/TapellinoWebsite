@@ -9,3 +9,9 @@
     src: url(fonts/Enso.ttf) format("truetype");
     font-display: swap;
 }
+
+@font-face {
+    font-family: Eleganticons;
+    src: url(fonts/ElegantIcons.ttf) format("truetype");
+    font-display: swap;
+}

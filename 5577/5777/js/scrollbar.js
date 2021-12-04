@@ -1,10 +1,9 @@
-
 function scrollbarhandler() {
     var scrollbarwidth = window.innerWidth - document.documentElement.clientWidth;
-    var coreelements = [document.getElementById("mainid"), document.getElementById("headerid"), document.getElementById("footerid")];
+    var coreelements = [document.querySelector("#mainid"), document.querySelector("#headerid"), document.querySelector("#footerid")];
     var lnum;
     for(lnum=0; lnum<coreelements.length; lnum++) {
-        coreelements[lnum].setAttribute("style", "margin-right: "+scrollbarwidth+"px;");
+        coreelements[lnum].style = "margin-right: "+scrollbarwidth+"px;";
     } 
 }
 
@@ -12,6 +11,11 @@ var bodyhasscrollbar = function() {
     return window.innerHeight < document.body.scrollHeight;
 }
 
-if(bodyhasscrollbar()) {
-    scrollbarhandler();
+function checkforscrollbarandact() {
+    if(bodyhasscrollbar()==true) {
+        scrollbarhandler();
+    }
 }
+
+// Just in case the user decides he will resize or move the page to a smaller or bigger screen
+window.addEventListener('resize', checkforscrollbarandact);

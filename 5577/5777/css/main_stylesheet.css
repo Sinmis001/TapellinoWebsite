@@ -1,8 +1,12 @@
 /* HTML Standard Document */
 
 * {
-    color:var(--text-color);
+    color:var(--text-color) !important;
     font-family: VRRegular, Arial, Helvetica, sans-serif;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 html {
@@ -17,6 +21,7 @@ body {
     --accent_color: #333333;
     --secondary_accent_color:#555555;
     --third_accent_color:#222222;
+    --jet_black:#000000;
     --silver_accent: #afafaf;
     --metal_color: #bbc2cc;
     --dark_silver_accent: #777777;
@@ -63,17 +68,8 @@ main {
     box-sizing: border-box;
 }
 
-/* Footer */
-
-footer {
-    background-color:var(--third_accent_color);
-}
-
 /* Menus & Nav */
 
-nav {
-    background-color: var(--third_accent_color);
-}
 
 div.menu_content_container.activated {
     background-color: var(--third_accent_color);
@@ -92,25 +88,24 @@ div#Lower_Nav_Container {
     background-color: var(--third_accent_color);
 }
 
-div.menu_header p, div.menu_header div.arrow, div.menu_content_container a, div.navobj a {
+div.menu_header p, div.menu_content_container a, div.navobj a {
     color: var(--text-color);
-    transition: color 0.5s, border 0.5s;
-}
-
-div.menu_header:hover div.arrow {
-    border: solid var(--Clear_water_blue);
-    border-width:0 3px 3px 0;
+    transition: color 0.5s, background-image 0.5s;
 }
 
 div.menu_header:hover .ncategory p, div.menu_content_container a:hover {
     color:var(--Clear_water_blue) !important;
 }
 
-div.navobj:hover a{
+a.nav-element:hover {
     color:var(--Clear_water_blue) !important;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+    header {
+        height:12vh !important;
+    }
+
     div.menu_content_container.activated {
         background-color: var(--accent_color);
         box-shadow: none !important;
@@ -118,6 +113,12 @@ div.navobj:hover a{
 
     .poked + .nav-phone {
         color:var(--Crystal_blue);
+    }
+}
+
+@media screen and (width:720px) and (height:1280px) {
+    header {
+        height:11vh !important;
     }
 }
 
@@ -135,11 +136,6 @@ div#webmaker p {
 
 .active {
     color: var(--Crystal_blue) !important;    
-}
-
-.arrow {
-    border: solid var(--text-color);
-    border-width:0 3px 3px 0;
 }
 
 /* Relocated to the css/navig_foot_lib.css file */
@@ -190,22 +186,10 @@ a {
 /* Arrows */
 
 .arrow {
-    display: inline-block;
-    vertical-align: middle;
-    border-radius:25%;
-    padding:4px;
-    box-sizing:border-box;
-    margin-left:8px;
-}
-
-.down {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.up {
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+    font-size: 1.5em !important;
+    font-family: Eleganticons !important;
+    box-sizing: border-box;
+    padding-bottom: 0.075em;
 }
 
 /* Links */
