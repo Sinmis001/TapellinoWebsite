@@ -14,7 +14,7 @@
         var linksforprod = ['signage',  'exterior-signs', 'interior-signs', '3d-signs', 'illuminated-signs', 'other-services', 'stickers', 'digital-printing#banners', 'digital-printing', 'laser-cutting', 'acrylic-fabrication'];
         var headersforprod = ['Signage', 'Exterior Signs', 'Interior Signs', '3D Signs', 'Illuminated Signs', 'Other Services', 'Stickers', 'Banners', 'Digital Printing', 'Laser Cutting', 'Acrylic Fabrication'];
         var headerforprod = "Products / Services";
-        menu_builder(headerforprod, headersforprod, linksforprod);
+        menu_builder(headerforprod, headersforprod, linksforprod, 0);
         
         // Mobile Menu
         mobilemenu();
@@ -77,7 +77,7 @@
     }
     
     // Text that the user sees when observing the said element, Text that the user sees when observing the child link elements, where does this element take you;
-    function menu_builder (header, headers, links) {
+    function menu_builder (header, headers, links, idm) {
         // Element Creation
         var headoflist = document.createElement('div');
         var headoftextlist = document.createElement('div');
@@ -106,6 +106,7 @@
         headoflist.appendChild(list_maker);
         headoflist.classList.add("nav-element");
         headoflist.classList.add("menu");
+        headoflist.id = idm;
         elementarr[1][0] = headoflist;
     }
     
@@ -168,6 +169,7 @@
 var menus;
 var cstatus = 0;
 var cpstatus = 0;
+var fullheightmenua=0;
 
 function menusdiscovery() {
     menus = document.querySelectorAll('.menu');
@@ -183,14 +185,40 @@ function menusdiscovery() {
     // Mobile Compatibility
     // Touch Screen
     mobmenu.addEventListener('click', cmenu);
+
+    // Menu height setter for animations
+    setTimeout(setheightofmenua, 30);
+
+    // Make sure to always have correct height
+    window.addEventListener('resize', setheightofmenua);
+}
+
+function setheightofmenua() {
+    fullheightmenua=0;
+    var ulliele = document.querySelectorAll('.menu')[1].querySelectorAll('li');
+    for(var i=0; i<ulliele.length; i++) {
+        fullheightmenua += ulliele[i].offsetHeight;
+    }
+    console.log(fullheightmenua)
 }
 
 function accessed() {
     this.classList.add("accessed");
+    if(this.id == 0) {
+        if(fullheightmenua==0) {
+            setheightofmenua();
+        }
+        var element = this.querySelector('ul');
+        element.style = 'height: '+fullheightmenua+'px !important';
+    }
 }
 
 function leftmenu() {
     this.classList.remove("accessed");
+    if(this.id == 0) {
+        var element = this.querySelector('ul');
+        element.style = 'height: 0';
+    }
 }
 
 function cmenu() {
@@ -209,9 +237,16 @@ function cmenu() {
 function cpmenu() {
     if(cpstatus===0) {
         this.classList.add("accessed");
+        if(fullheightmenua<400) {
+            setheightofmenua();
+        }
+        let element = this.querySelector('ul');
+        element.style = 'height: '+fullheightmenua+'px !important';
         cpstatus=1;
     } else {
         this.classList.remove("accessed");
+        let element = this.querySelector('ul');
+        element.style = 'height: 0';
         cpstatus=0;
     }
 }

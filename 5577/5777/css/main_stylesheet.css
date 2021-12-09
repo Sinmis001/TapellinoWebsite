@@ -68,39 +68,6 @@ main {
     box-sizing: border-box;
 }
 
-/* Menus & Nav */
-
-
-div.menu_content_container.activated {
-    background-color: var(--third_accent_color);
-    box-shadow: 5px 7px 5px rgba(20, 20, 20, 0.75);
-}
-
-.nav-header {
-    background-color: var(--dark_silver_accent);
-}
-
-div#Upper_Nav_Container {
-    background-color: var(--third_accent_color);
-}
-
-div#Lower_Nav_Container {
-    background-color: var(--third_accent_color);
-}
-
-div.menu_header p, div.menu_content_container a, div.navobj a {
-    color: var(--text-color);
-    transition: color 0.5s, background-image 0.5s;
-}
-
-div.menu_header:hover .ncategory p, div.menu_content_container a:hover {
-    color:var(--Clear_water_blue) !important;
-}
-
-a.nav-element:hover {
-    color:var(--Clear_water_blue) !important;
-}
-
 @media screen and (max-width: 1200px) {
     header {
         height:12vh !important;
@@ -133,10 +100,6 @@ div#webmaker p {
 }
 
 /* Personalized */
-
-.active {
-    color: var(--Crystal_blue) !important;    
-}
 
 /* Relocated to the css/navig_foot_lib.css file */
 
