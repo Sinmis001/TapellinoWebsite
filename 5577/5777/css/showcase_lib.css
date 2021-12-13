@@ -71,6 +71,12 @@ div.catalog-container div.showcase-container .wide-tile img {
 
 div.catalog-container div.showcase-container .long-tile {
     grid-row: span 2;
+    height: calc(64vmin + 0.75vw) !important;
+}
+
+div.catalog-container div.showcase-container .long-tile img {
+    width: 80% !important;
+    padding-bottom: 6em;
 }
 
 div.catalog-container div.showcase-container .normal-tile {
@@ -94,7 +100,7 @@ div.catalog-container div.showcase-container div.content-container h1 {
     width: 90%;
     text-align: center;
     top:100%;
-    font-size: 2.25vmin;
+    font-size: 2em;
     font-weight: 400;
     letter-spacing: 0.1vmin;
     margin:0;

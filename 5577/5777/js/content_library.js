@@ -1,6 +1,6 @@
 // Showcase function maker
 function showcase_constructor(piclinks, picheads, num, disclaimer) {
-    const parelement = document.getElementsByClassName("showcase-container");
+    const parelement = document.querySelectorAll(".showcase-container");
     var truearrlenght = piclinks[0].length;
 
     // Validation incase there are no wide or long pictures

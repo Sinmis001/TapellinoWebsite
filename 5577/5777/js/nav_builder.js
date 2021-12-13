@@ -54,8 +54,7 @@
             if(levelofaccess==1) {
                 linkelement.href = stringrebuilder(links);
                 var atext = document.createTextNode(stringrebuilder(header));
-                linkelement.classList.add("nav-menu-element");   
-    
+                linkelement.classList.add("nav-menu-element"); 
             } else {
                 linkelement.href = links[i];
                 var atext = document.createTextNode(header[i]);
@@ -169,7 +168,6 @@
 var menus;
 var cstatus = 0;
 var cpstatus = 0;
-var fullheightmenua=0;
 
 function menusdiscovery() {
     menus = document.querySelectorAll('.menu');
@@ -185,40 +183,14 @@ function menusdiscovery() {
     // Mobile Compatibility
     // Touch Screen
     mobmenu.addEventListener('click', cmenu);
-
-    // Menu height setter for animations
-    setTimeout(setheightofmenua, 30);
-
-    // Make sure to always have correct height
-    window.addEventListener('resize', setheightofmenua);
-}
-
-function setheightofmenua() {
-    fullheightmenua=0;
-    var ulliele = document.querySelectorAll('.menu')[1].querySelectorAll('li');
-    for(var i=0; i<ulliele.length; i++) {
-        fullheightmenua += ulliele[i].offsetHeight;
-    }
-    console.log(fullheightmenua)
 }
 
 function accessed() {
     this.classList.add("accessed");
-    if(this.id == 0) {
-        if(fullheightmenua==0) {
-            setheightofmenua();
-        }
-        var element = this.querySelector('ul');
-        element.style = 'height: '+fullheightmenua+'px !important';
-    }
 }
 
 function leftmenu() {
     this.classList.remove("accessed");
-    if(this.id == 0) {
-        var element = this.querySelector('ul');
-        element.style = 'height: 0';
-    }
 }
 
 function cmenu() {
@@ -237,16 +209,9 @@ function cmenu() {
 function cpmenu() {
     if(cpstatus===0) {
         this.classList.add("accessed");
-        if(fullheightmenua<400) {
-            setheightofmenua();
-        }
-        let element = this.querySelector('ul');
-        element.style = 'height: '+fullheightmenua+'px !important';
         cpstatus=1;
     } else {
         this.classList.remove("accessed");
-        let element = this.querySelector('ul');
-        element.style = 'height: 0';
         cpstatus=0;
     }
 }

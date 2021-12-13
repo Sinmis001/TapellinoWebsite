@@ -139,13 +139,6 @@ a {
     text-decoration: none;
 }
 
-/* p_us_universal file coloring */
-
-#cover {
-    border-bottom: 0.5em solid var(--background-color);
-    background-color: var(--background-color);
-}
-
 /* Arrows */
 
 .arrow {

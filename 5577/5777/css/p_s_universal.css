@@ -42,11 +42,6 @@ div.information-panel {
     position: relative;
 }
 
-div.information-panel div {
-    width:80%;
-    display: flex;
-}
-
 div.information-panel h3 {
     font-size: 1.5vmin;
     font-weight: 200;
@@ -136,4 +131,5 @@ div#stickerpagetext h3 {
     flex: 1 0 auto;
     flex-direction: column;
     align-items: center;
+    background-color: var(--background-color);
 }

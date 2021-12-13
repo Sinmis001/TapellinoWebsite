@@ -20,7 +20,7 @@ function headerassembler() {
 
     // CSS Loader
     var headerboy = document.querySelector("head");
-    const csslinks = ['fontsinit.css', 'main_stylesheet.css', 'nav_style.css', 'footer_style.css', 'menu_lib.css'];
+    const csslinks = ['fontsinit.css', 'main_stylesheet.css', 'nav_style.css', 'footer_style.css'];
     var locationdiscovery = 'css/';
     csslinkhandler(headerboy, csslinks, locationdiscovery);
 
