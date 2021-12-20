@@ -136,6 +136,9 @@ div.catalog-container h4 {
         flex: 1 1 8.75vmin !important;
     }
 
+    div.catalog-container div.showcase-container div.content-container h1 {
+        font-size: 0.5em !important;
+    }
 }
 
 @media screen and (max-width:500px) and (orientation:landscape) {
@@ -150,6 +153,10 @@ div.catalog-container h4 {
         height:26vmin !important;
         flex: 1 1 8.75vmin !important;
     }
+
+    div.catalog-container div.showcase-container div.content-container h1 {
+        font-size: 0.5em !important;
+    }
 }
 
 @media screen and (min-width:520px) and (max-width:1000px) and (orientation:landscape) {
@@ -163,6 +170,10 @@ div.catalog-container h4 {
     div.catalog-container div.showcase-container div.content-container {
         height:27vmin !important;
         flex: 1 1 8.75vmin !important;
+    }
+
+    div.catalog-container div.showcase-container div.content-container h1 {
+        font-size: 0.5em !important;
     }
 }
 
@@ -180,6 +191,10 @@ div.catalog-container h4 {
         height:26vmin;
         flex: 1 1 8.75vmin;
     }
+
+    div.catalog-container div.showcase-container div.content-container h1 {
+        font-size: 1em !important;
+    }
 }
 
 @media screen and (max-width:1240px) and (orientation:landscape) and (max-height:750px) {
@@ -193,6 +208,10 @@ div.catalog-container h4 {
     div.catalog-container div.showcase-container div.content-container {
         height:27vmin;
         flex: 1 1 8.75vmin;
+    }
+
+    div.catalog-container div.showcase-container div.content-container h1 {
+        font-size: 1em !important;
     }
 }
 

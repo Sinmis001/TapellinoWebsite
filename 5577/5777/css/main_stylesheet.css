@@ -89,22 +89,6 @@ main {
     }
 }
 
-/* Footer Personalization */
-
-div#finformation a {
-    color: var(--silver_accent);
-}
-
-div#webmaker p {
-    color: var(--metal_color);
-}
-
-/* Personalized */
-
-/* Relocated to the css/navig_foot_lib.css file */
-
-/* Personalized Tag Changes */
-
 
 /* Home Page */
 

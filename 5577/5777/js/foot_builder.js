@@ -17,7 +17,6 @@ function footerconstructor() {
     var footertextlist = ['©2021 Tapellino Signs', 'Made by SinmisDev'];
     footertext(footertextlist);
     elementfootarr[0][0].id = "copyright";
-    elementfootarr[1][0].id = "finformation"
     elementfootarr[0][1].id = "webmaker";
 
     footerid.appendChild(elementfootarr[0][0]);
