@@ -185,14 +185,31 @@ function menusdiscovery() {
     mobmenu.addEventListener('click', cmenu);
 }
 
+// Hover effects
 function accessed() {
     this.classList.add("accessed");
+    var e = this.querySelector('ul');
+    heightoful(e);
 }
 
 function leftmenu() {
     this.classList.remove("accessed");
+    var e = this.querySelector('ul');
+    removeheight(e);
 }
 
+// Support for browsers that have issues with calc on height like firefox 
+function heightoful(ulele) {
+    var ecount = ulele.querySelectorAll('li').length;
+    var heightperele = ulele.querySelector('li').offsetHeight;
+    ulele.style = "height: "+heightperele*ecount+"px";
+}
+
+function removeheight(ulele) {
+    ulele.style = "height: 0";
+}
+
+// Click effects
 function cmenu() {
     var mobnav = document.querySelector('#nav-bar');
     if(cstatus===0) {

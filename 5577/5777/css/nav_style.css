@@ -60,7 +60,7 @@ a.nav-element, div.nav-element div {
     cursor:pointer;
     user-select: text;
     background-color: var(--jet_black);
-    transition: color 0.65s ease, background-color 0.75s ease-in;
+    transition: color 0.65s linear, background-color 0.65s linear;
 }
 
 a.nav-element {
@@ -70,12 +70,12 @@ a.nav-element {
 div.nav-element:hover div, a.nav-element:hover, a.nav-menu-element:hover {
     color:var(--Clear_water_blue) !important;
     background-color: var(--accent_color);
-    transition: color 0.65s ease, background-color 0.75s;
+    transition: color 0.65s ease, background-color 0.65s linear;
 }
 
 div.nav-element:hover div span.arrow {
     color:var(--Clear_water_blue) !important;
-    transition: color 0.65s ease;
+    transition: color 0.65s ease !important;
 }
 
 div.nav-element div {
@@ -87,25 +87,22 @@ div.nav-element div {
 
 div.menu ul {
     display: block;
-    visibility: visible;
     width:14vw;
-    background-color: var(--accent_color);
+    background-color: var(--jet_black);
     list-style: none;
-    /* position: absolute !important; */
     top:-1vh;
-    border-radius: 0.5em;
+    border-radius: 0.15em;
     padding: 0;
     margin:0;
     overflow: hidden;
     opacity: 0;
     height: 0;
-    transition: height 0.55s ease-in-out, opacity 1s ease;
+    transition: all 0.55s ease-in-out
 }
 
 div.menu.accessed ul {
     opacity: 1;
-    height:calc(calc(5.25vmin+0.9em)*11);
-    transition: height 0.55s ease-in-out, opacity 1s ease-out;
+    transition: all 0.55s ease-in-out;
 }
 
 div.menu ul li {
@@ -113,10 +110,6 @@ div.menu ul li {
     justify-content: center;
     align-items: center;
     height:5.25vmin;
-}
-
-div.menu ul li:last-child {
-    padding-bottom:0.9em;
 }
 
 div.menu ul li a {
