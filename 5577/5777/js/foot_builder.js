@@ -3,7 +3,7 @@
 var elementfootarr = [[], []];
 
 function footerconstructor() {
-    const footerid = document.getElementById("footerid");
+    const footerid = document.querySelector('footer');
 
     // Footer information
     const finfodiv = document.createElement("div");

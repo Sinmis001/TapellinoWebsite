@@ -1,6 +1,6 @@
 function scrollbarhandler() {
     var scrollbarwidth = window.innerWidth - document.documentElement.clientWidth;
-    var coreelements = [document.querySelector("#mainid"), document.querySelector("#headerid"), document.querySelector("#footerid")];
+    var coreelements = [document.querySelector('main'), document.querySelector('header'), document.querySelector('footer')];
     var lnum;
     for(lnum=0; lnum<coreelements.length; lnum++) {
         coreelements[lnum].style = "margin-right: "+scrollbarwidth+"px;";

@@ -8,34 +8,6 @@ div.catalog-container {
     justify-content: center;
 }
 
-div.catalog-container div.catalog-text {
-    height: 20vmin;
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    justify-content: center;
-}
-
-div.catalog-container div.catalog-text h3 {
-    font-size: 5vmin;
-    font-weight: 500;
-    font-family: Enso !important;
-    letter-spacing: 0.1em;
-    padding:0;
-    margin:0;
-}
-
-div.catalog-container div.catalog-text h5 {
-    font-size: 2.5vmin;
-    font-weight: 500;
-    font-family: Enso !important;
-    letter-spacing: 0.1em;
-    padding:0;
-    margin:0;
-    top:0.75vmin;
-    position: relative;
-}
-
 div.catalog-container div.showcase-container {
     width:90%;
     height:80%;
@@ -71,7 +43,7 @@ div.catalog-container div.showcase-container .wide-tile img {
 
 div.catalog-container div.showcase-container .long-tile {
     grid-row: span 2;
-    height: calc(64vmin + 0.75vw) !important;
+    height: 47em !important;
 }
 
 div.catalog-container div.showcase-container .long-tile img {
@@ -105,7 +77,7 @@ div.catalog-container div.showcase-container div.content-container h1 {
     letter-spacing: 0.1vmin;
     margin:0;
     padding:0;
-    margin-bottom:0.75vmin;
+    margin-top:1em;
 }
 
 div.catalog-container h4 {
@@ -144,7 +116,7 @@ div.catalog-container h4 {
     }
 
     div.catalog-container div.showcase-container div.content-container h1 {
-        font-size: 0.5em !important;
+        font-size: 1em !important;
     }
 }
 
@@ -167,7 +139,7 @@ div.catalog-container h4 {
 
 @media screen and (min-width:520px) and (max-width:990px) and (orientation:landscape) {
     div.catalog-container div.showcase-container {
-        grid-template-columns: 45vmin 45vmin 45vmin !important;
+        grid-template-columns: 54vmin 54vmin 54vmin !important;
         padding-top: 2.25em !important;
         padding-bottom: 2.25em !important;
     }
@@ -178,7 +150,7 @@ div.catalog-container h4 {
     }
 
     div.catalog-container div.showcase-container div.content-container h1 {
-        font-size: 0.5em !important;
+        font-size: 0.75em !important;
     }
 }
 

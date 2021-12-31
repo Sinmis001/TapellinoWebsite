@@ -1,5 +1,5 @@
 // Nav Builder
-    const parelement = document.getElementById("headerid");
+    const parelement = document.querySelector('header');
     var elementarr = [[], [], [], []];
     
     function nav_builder () {
