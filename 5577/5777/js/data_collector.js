@@ -7,10 +7,12 @@ function data_request_showcase(filename) {
     var dataamount = xml.getElementsByTagName('data');
     var nametags = new Array;
     var imglocs = new Array;
-    for(var i=0; i<dataamount.lenght; i++) {
+    var i=0;
+    while(i<dataamount.lenght) {
         var databracket = dataamount[i];
         nametags[i] = databracket.getElementsByTagName('nametag');
         imglocs[i] = databracket.getElementsByTagName('imgloc');
+        i++
     }
     showcase_constructor(imglocs, nametags, dataamount.lenght);
 }
