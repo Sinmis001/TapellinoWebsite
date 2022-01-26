@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<catalog>
+    <normaltile>
+        <data>
+            <nametag>"For Sale Sticker"</nametag>
+            <imgloc>"images/stickers/forsalesticker.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Toyota Sticker"</nametag>
+            <imgloc>"images/stickers/toyota.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Honda Sticker"</nametag>
+            <imgloc>"images/stickers/honda.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Coming Soon"</nametag>
+            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Coming Soon"</nametag>
+            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Coming Soon"</nametag>
+            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Coming Soon"</nametag>
+            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Coming Soon"</nametag>
+            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+        </data>
+        <data>
+            <nametag>"Coming Soon"</nametag>
+            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+        </data>
+    </normaltile>
+    <widetile>
+        <data>
+            <nametag>"Kawasaki Sticker"</nametag>
+            <imgloc>"images/stickers/kawasaki.svg"</imgloc>
+        </data>
+    </widetile>
+    <longtile>
+    </longtile>
+</catalog>

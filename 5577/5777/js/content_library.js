@@ -1,14 +1,13 @@
 // Showcase function maker
-function showcase_constructor(piclinks, picheads, num, disclaimer) {
-    const parelement = document.querySelectorAll(".showcase-container");
-    var truearrlenght = piclinks[0].length;
-
-    // Validation incase there are no wide or long pictures
-    if(typeof piclinks[1] != 'undefined') {
-        truearrlenght += piclinks[1].length;
-    } else if(typeof piclinks[2] != 'undefined') {
-        truearrlenght += piclinks[2].length;
-    }
+function showcase_constructor(piclinks, picheads, truearrlenght) {
+    const parelement = document.querySelector(".showcase-container");
+    // var truearrlenght = piclinks[0].length;
+    // // Validation incase there are no wide or long pictures
+    // if(typeof piclinks[1] != 'undefined') {
+    //     truearrlenght += piclinks[1].length;
+    // } else if(typeof piclinks[2] != 'undefined') {
+    //     truearrlenght += piclinks[2].length;
+    // }
     
     var arrprogress=0, warrprogress=0, larrprogress=0;
 
@@ -68,22 +67,8 @@ function showcase_constructor(piclinks, picheads, num, disclaimer) {
             contentdiv.remove();
             console.warn = () => {};
         } else {
-            parelement[num].appendChild(contentdiv);
+            parelement.appendChild(contentdiv);
         }
-    }
-
-    // Disclaimer Text if i say so
-    if(disclaimer==true) {
-        let topparent = document.getElementsByClassName("catalog-container");
-        let disclaimertext = document.createElement("h4");
-        let distext = document.createTextNode("*For pricing and sizes visit our shop ");
-        disclaimertext.appendChild(distext);
-            let disclaimerlink = document.createElement("a");
-            disclaimerlinktext = document.createTextNode("here");
-            disclaimerlink.appendChild(disclaimerlinktext);
-            disclaimerlink.setAttribute("href", "../contact#location");
-            disclaimertext.appendChild(disclaimerlink);
-        topparent[num].appendChild(disclaimertext);
     }
 }
 

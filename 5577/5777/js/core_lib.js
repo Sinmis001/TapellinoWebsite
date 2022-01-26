@@ -18,7 +18,6 @@ function remove_unwanted_scripts() {
 }
 
 // Web Builder for simulating server-side construction
-
 function webbuilder() {
     // Construct navigation and footer
     errorcatcher(nav_builder);
