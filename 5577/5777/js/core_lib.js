@@ -24,7 +24,7 @@ function webbuilder() {
     errorcatcher(footerconstructor);
     
     // Check for scrollbar and deal with it, remove scripts so they don't appear in inspector and discover the menus to add clickability and hoverability
-    checkforscrollbarandact();
+    errorcatcher(checkforscrollbarandact);
     title_fix();
     setTimeout(remove_unwanted_scripts(), 10);
     menusdiscovery();
