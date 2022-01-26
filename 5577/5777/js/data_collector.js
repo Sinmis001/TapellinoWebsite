@@ -1,7 +1,7 @@
 // Get data from xml file for showcase builder
 function data_request_showcase(filename) {
     var datarequest = new XMLHttpRequest();
-    datarequest.open("GET", "data/"+filename+".xml", true);
+    datarequest.open("GET", "data/"+filename+".xml", false);
     datarequest.send();
     var xml = datarequest.responseXML;
     var dataamount = xml.getElementsByTagName('data');
