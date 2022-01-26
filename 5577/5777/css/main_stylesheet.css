@@ -73,19 +73,18 @@ main {
         height:12vh !important;
     }
 
-    div.menu_content_container.activated {
-        background-color: var(--accent_color);
-        box-shadow: none !important;
-    }
-
-    .poked + .nav-phone {
-        color:var(--Crystal_blue);
+    footer {
+        height: 12vh !important;
     }
 }
 
 @media screen and (width:720px) and (height:1280px) {
     header {
         height:11vh !important;
+    }
+
+    footer {
+        height: 11vh !important;
     }
 }
 

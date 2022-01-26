@@ -9,19 +9,8 @@ div.title {
     background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    filter:blur(2.5px) brightness(0.75);
+    filter:brightness(0.75);
     z-index: -1;
-}
-
-div.title div.title-text h1 {
-    position: absolute;
-    top:28%;
-
-}
-
-div.title div.title-text h3 {
-    position: absolute;
-    top:27.5%;
 }
 
 div.title div.title-indent {
@@ -59,14 +48,13 @@ div.information-panel img {
 
 div#stickerpagetext {
     width: auto;
-    height: 60%;
-    position: absolute !important;
-    top:0;
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    position: absolute !important;
+    top:0;
     z-index: 10;
 }
 
@@ -87,7 +75,9 @@ div#stickerpagetext h3 {
     letter-spacing: 0.1em;
     padding:0;
     margin:0;
-    padding-bottom: 3em;
+    position: absolute;
+    top:33%;
+
 }
 
 /* Smaller screen support */

@@ -41,3 +41,12 @@ footer p {
 	font-size:1.5em;
 	padding-left:2%;
 }
+
+@media screen and (orientation:portrait) {
+	div img {
+		width:90vw;
+	}
+	footer p {
+		font-size: 2.5em;
+	}
+}

@@ -61,11 +61,11 @@ footer div#finformation a {
 
 @media screen and (max-width:1450px) {
     footer #copyright {
-        font-size:1em !important;
+        font-size:1.25em !important;
     }
 
     footer div#finformation a {
-        font-size: 0.75em !important;
+        font-size: 1em !important;
     }
 }
 
