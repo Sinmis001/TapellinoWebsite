@@ -1,8 +1,10 @@
 // Title text fix
 function title_fix() {
-    let divtitle = document.querySelector('.title-text');
-    let imgheight = document.querySelector('.title-background').offsetHeight;
-    divtitle.style="height:"+imgheight+"px";
+    if(document.querySelector('.title-text') != null || document.querySelector('.title-text') != undefined) {
+        let divtitle = document.querySelector('.title-text');
+        let imgheight = document.querySelector('.title-background').offsetHeight;
+        divtitle.style="height:"+imgheight+"px";
+    }
 }
 
 // Update on resize so it always has correct height
@@ -17,8 +19,32 @@ function remove_unwanted_scripts() {
     }
 }
 
+// Scrollbar functions
+function scrollbarhandler() {
+    var scrollbarwidth = window.innerWidth - document.documentElement.clientWidth;
+    var coreelements = [document.querySelector('main'), document.querySelector('header'), document.querySelector('footer')];
+    var lnum;
+    for(lnum=0; lnum<coreelements.length; lnum++) {
+        coreelements[lnum].style = "margin-right: "+scrollbarwidth+"px;";
+    } 
+}
+
+var bodyhasscrollbar = function() {
+    return window.innerHeight < document.body.scrollHeight;
+}
+
+function checkforscrollbarandact() {
+    if(bodyhasscrollbar()==true) {
+        scrollbarhandler();
+    }
+}
+
+// Just in case the user decides he will resize or move the page to a smaller or bigger screen
+window.addEventListener('resize', checkforscrollbarandact);
+
 // Web Builder for simulating server-side construction
 function webbuilder() {
+    setTimeout(()=> { 
     // Construct navigation and footer
     errorcatcher(nav_builder);
     errorcatcher(footerconstructor);
@@ -28,6 +54,7 @@ function webbuilder() {
     title_fix();
     setTimeout(remove_unwanted_scripts(), 10);
     menusdiscovery();
+    }, 1);
 }
 
 document.onload = webbuilder();

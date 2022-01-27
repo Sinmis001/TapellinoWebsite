@@ -1,47 +1,47 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <catalog>
     <normaltile>
         <data>
-            <nametag>"For Sale Sticker"</nametag>
-            <imgloc>"images/stickers/forsalesticker.svg"</imgloc>
+            <nametag>For Sale Sticker</nametag>
+            <imgloc>images/stickers/forsalesticker.svg</imgloc>
         </data>
         <data>
-            <nametag>"Toyota Sticker"</nametag>
-            <imgloc>"images/stickers/toyota.svg"</imgloc>
+            <nametag>Toyota Sticker</nametag>
+            <imgloc>images/stickers/toyota.svg</imgloc>
         </data>
         <data>
-            <nametag>"Honda Sticker"</nametag>
-            <imgloc>"images/stickers/honda.svg"</imgloc>
+            <nametag>Honda Sticker</nametag>
+            <imgloc>images/stickers/honda.svg</imgloc>
         </data>
         <data>
-            <nametag>"Coming Soon"</nametag>
-            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+            <nametag>Coming soon</nametag>
+            <imgloc>images/stickers/coming_soon.svg</imgloc>
         </data>
         <data>
-            <nametag>"Coming Soon"</nametag>
-            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+            <nametag>Coming soon</nametag>
+            <imgloc>images/stickers/coming_soon.svg</imgloc>
         </data>
         <data>
-            <nametag>"Coming Soon"</nametag>
-            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+            <nametag>Coming soon</nametag>
+            <imgloc>images/stickers/coming_soon.svg</imgloc>
         </data>
         <data>
-            <nametag>"Coming Soon"</nametag>
-            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+            <nametag>Coming soon</nametag>
+            <imgloc>images/stickers/coming_soon.svg</imgloc>
         </data>
         <data>
-            <nametag>"Coming Soon"</nametag>
-            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+            <nametag>Coming soon</nametag>
+            <imgloc>images/stickers/coming_soon.svg</imgloc>
         </data>
         <data>
-            <nametag>"Coming Soon"</nametag>
-            <imgloc>"images/stickers/coming_soon.svg"</imgloc>
+            <nametag>Coming soon</nametag>
+            <imgloc>images/stickers/coming_soon.svg</imgloc>
         </data>
     </normaltile>
     <widetile>
         <data>
-            <nametag>"Kawasaki Sticker"</nametag>
-            <imgloc>"images/stickers/kawasaki.svg"</imgloc>
+            <nametag>Kawasaki Sticker</nametag>
+            <imgloc>images/stickers/kawasaki.svg</imgloc>
         </data>
     </widetile>
     <longtile>

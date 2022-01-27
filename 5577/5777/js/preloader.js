@@ -12,7 +12,7 @@ function cssloader() {
 
 // Load scripts
 function scriptloader() {
-    let scripts = ['nav_builder.js', 'foot_builder.js', 'scrollbar.js', 'core_lib.js'];
+    let scripts = ['nav_builder.js', 'foot_builder.js', 'core_lib.js'];
     for(let i=0; i<scripts.length; i++) {
         let scriptele = document.createElement("script");
         scriptele.src = "js/"+scripts[i];

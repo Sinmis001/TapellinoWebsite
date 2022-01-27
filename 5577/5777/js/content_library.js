@@ -1,16 +1,8 @@
 // Showcase function maker
 function showcase_constructor(piclinks, picheads, truearrlenght) {
     const parelement = document.querySelector(".showcase-container");
-    // var truearrlenght = piclinks[0].length;
-    // // Validation incase there are no wide or long pictures
-    // if(typeof piclinks[1] != 'undefined') {
-    //     truearrlenght += piclinks[1].length;
-    // } else if(typeof piclinks[2] != 'undefined') {
-    //     truearrlenght += piclinks[2].length;
-    // }
     
     var arrprogress=0, warrprogress=0, larrprogress=0;
-
     for(let i=0; i<truearrlenght; i+=0) {
         
         // Create content div
@@ -18,26 +10,26 @@ function showcase_constructor(piclinks, picheads, truearrlenght) {
         
         // Skip default
         var skip=false;
-
+        
         // Random picture order to make it look cool
         var rngnum;
         var imag = document.createElement("img");
         var headelement = document.createElement("h1");
         var headtext;
-
+        
         rngnum = rnggen(3);
         var texttotran;
         var imgtotran;
-
+        
         // What image this time
-        if(rngnum == 2 && typeof piclinks[2] != 'undefined' && larrprogress<piclinks[2].length) {
+        if(rngnum == 2 && typeof piclinks[2][larrprogress] != 'undefined' && larrprogress<piclinks[2].length) {
             imgtotran = piclinks[2][larrprogress];
             texttotran = picheads[2][larrprogress];
             contentdiv.setAttribute("class", "content-container long-tile");
             larrprogress+=1;
             i++;
             skip=true;
-        } else if(rngnum == 1 && typeof piclinks[1] != 'undefined' && warrprogress<piclinks[1].length) {
+        } else if(rngnum == 1 && typeof piclinks[1][warrprogress] != 'undefined' && warrprogress<piclinks[1].length) {
             imgtotran =  piclinks[1][warrprogress];
             texttotran = picheads[1][warrprogress];
             contentdiv.setAttribute("class", "content-container wide-tile");

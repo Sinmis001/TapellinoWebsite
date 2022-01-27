@@ -20,7 +20,7 @@ footer #copyright {
     display: flex;
     flex:1 1 auto;
     align-items: center;
-    margin-left:0.5em;
+    margin-left:1.5em;
 }
 
 footer p#webmaker {
