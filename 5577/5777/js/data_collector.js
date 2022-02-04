@@ -1,10 +1,7 @@
 // Get data from xml file for showcase builder
 function data_request_showcase(filename) {
-    var datarequest = new XMLHttpRequest();
-    datarequest.open("GET", "data/"+filename+".xml", false);
-    datarequest.send();
-    var xml = datarequest.responseXML;
-    var dataamount = xml.getElementsByTagName('data');
+    var xml = xmlcall(filename);
+    var dataamount = xml.querySelectorAll('data');
     var nametags = [[],[],[]];
     var imglocs = [[],[],[]];
 
@@ -38,6 +35,42 @@ function data_request_showcase(filename) {
     showcase_constructor(imglocs, nametags, dataamount.length);
 }
 
+// Get data for landing page
+function lander_construction(filename) {
+    var xml = xmlcall(filename);
+    var datalist = xml.querySelectorAll('data');
+}
+
+function nav_constructor(filename) {
+    var xml = xmlcall(filename);
+    var nav = xml.querySelector('nav').innerHTML;
+    var headertag = document.querySelector('header');
+    headertag.innerHTML += nav;
+}
+
+function footer_constructor(filename) {
+    var xml = xmlcall(filename);
+    var footer = xml.querySelector('footer').innerHTML;
+    var footertag = document.querySelector('footer');
+    footertag.innerHTML += footer;
+}
+
+function css_constructor(filename) {
+    var xml = xmlcall(filename);
+    var css_content = xml.querySelector('css').innerHTML;
+    var headtag = document.querySelector('head');
+    headtag.innerHTML += css_content;
+}
+
+// Call XML
+function xmlcall(filename) {
+    var datarequest = new XMLHttpRequest();
+    datarequest.open("GET", "data/"+filename+".xml", false);
+    datarequest.send();
+    return datarequest.responseXML;
+}
+
+// Retrieve data from specific tags
 function datareceiver(databracket, tagname) {
     return databracket.getElementsByTagName(tagname).item(0).innerHTML;
 }

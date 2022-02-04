@@ -7,11 +7,14 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    text-decoration: none
 }
 
 html {
     margin:0;
-    padding:0;  
+    padding:0;
+    overflow-y: hidden;
+    display: block !important;
 }
 
 body {
@@ -37,7 +40,7 @@ body {
     margin:0;
     padding:0;
     background-color:var(--background-color);
-    display: flex;
+    display: flex !important;
     flex: 0 0 auto;
     flex-direction: column;
 }
@@ -53,74 +56,28 @@ body.light {
     --dark_silver_accent: #777777;
 }
 
-header {
-    position: relative;
-    height: 10vh;
-    z-index:999;
-    box-sizing: border-box;
-    background-color:var(--accent_color);
-}
-
 main {
     position: relative;
     height: auto;
-    z-index:1;
+    z-index:2;
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 1200px) {
-    header {
-        height:12vh !important;
+/* @media screen and (max-width:480px) and (max-height:320px), screen and (min-width:300px) and (max-height: 500px) and (max-width:340px) and (min-height:460px) {
+    * {
+        display: none;
+    }
+
+    .unsupported {
+        display: block !important;
+        font-size:1em;
+        text-align: center;
     }
 
     footer {
-        height: 12vh !important;
+        display: none !important;
     }
-}
-
-@media screen and (width:720px) and (height:1280px) {
-    header {
-        height:11vh !important;
-    }
-
-    footer {
-        height: 11vh !important;
-    }
-}
-
-
-/* Home Page */
-
-div#homecontact a{
-    color:var(--Crystal_blue);
-}
-
-/* showcase_lib file coloring */
-
-div.title h1 {
-    text-shadow: 0.075em 0.075em 5px var(--background-color);
-}
-
-div.title h3 {
-    text-shadow: 0.095em 0.095em 5px var(--background-color);
-}
-
-div.catalog-container {
-    background-color: var(--third_accent_color);
-}
-
-div.catalog-container div.showcase-container div.content-container {
-    background-color: var(--background-color);
-    
-}
-
-div.catalog-container h4 a {
-    color:var(--Light-Blue);
-}
-
-a {
-    text-decoration: none;
-}
+} */
 
 /* Arrows */
 
@@ -129,6 +86,7 @@ a {
     font-family: Eleganticons !important;
     box-sizing: border-box;
     padding-bottom: 0.075em;
+    transition: color 0.65s ease !important;
 }
 
 /* Links */
@@ -138,4 +96,24 @@ a {
 
 :visited {
     color:var(--Crystal_blue);
+}
+
+/* Go to top button */
+
+button#gototop {
+    display: none;
+    width:1.75em;
+    height:1.75em;
+    background-color:var(--secondary_accent_color);
+    position: fixed;
+    bottom:1em;
+    right: 1em;
+    font-size: 2.25em !important;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Unsupported */
+.unsupported {
+    display: none;
 }

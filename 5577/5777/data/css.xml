@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<css>
+    <link href="css/fontsinit.css" rel="stylesheet" />
+    <link href="css/main_stylesheet.css" rel="stylesheet" />
+    <link href="css/nav_style.css" rel="stylesheet" />
+    <link href="css/footer_style.css" rel="stylesheet" />
+</css>

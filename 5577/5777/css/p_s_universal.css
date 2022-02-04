@@ -30,7 +30,6 @@ div.information-panel {
 div.information-panel h3 {
     font-size: 1.5vmin;
     font-weight: 200;
-    letter-spacing: 0.05vmin;
     width:60%;
     padding-left:2.5%;
     padding-right:2.5%;
@@ -62,9 +61,10 @@ div#stickerpagetext h1 {
     font-size: 14vmin;
     font-weight: 500;
     font-family: Enso !important;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     padding:0;
     margin:0;
+    text-shadow: 0.075em 0.075em 5px var(--background-color);
 }
 
 
@@ -72,12 +72,11 @@ div#stickerpagetext h3 {
     font-size: 3.75vmin;
     font-weight: 500;
     font-family: Enso !important;
-    letter-spacing: 0.1em;
     padding:0;
     margin:0;
     position: absolute;
-    top:33%;
-
+    top:28.5%;
+    text-shadow: 0.095em 0.095em 5px var(--background-color);
 }
 
 /* Smaller screen support */
@@ -85,15 +84,6 @@ div#stickerpagetext h3 {
 @media screen and (max-width: 1000px) {
     div.title div#stickerpagetext.title-text h1 {
         font-size: 11.5vmin;
-    }
-
-    div.title div.title-text h1 {
-        top:28%;
-    
-    }
-    
-    div.title div.title-text h3 {
-        top:23.5%;
     }
 
     div.title-text.title-indent {
@@ -118,4 +108,23 @@ div#stickerpagetext h3 {
     flex-direction: column;
     align-items: center;
     background-color: var(--background-color);
+}
+
+div#cover::before {
+    content: '';
+    width:100vw;
+    height:10em;
+    display: block;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: var(--third_accent_color);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    top:0;
+    transform:skewY(4.5deg);
+    transform-origin: 100% 0;
+    
 }

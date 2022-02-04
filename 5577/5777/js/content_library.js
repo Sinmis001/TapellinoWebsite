@@ -12,12 +12,10 @@ function showcase_constructor(piclinks, picheads, truearrlenght) {
         var skip=false;
         
         // Random picture order to make it look cool
-        var rngnum;
+        var rngnum = rnggen(3);
         var imag = document.createElement("img");
         var headelement = document.createElement("h1");
         var headtext;
-        
-        rngnum = rnggen(3);
         var texttotran;
         var imgtotran;
         
@@ -42,6 +40,12 @@ function showcase_constructor(piclinks, picheads, truearrlenght) {
             contentdiv.setAttribute("class", "content-container normal-tile");
             arrprogress+=1;
             i++;
+            // Experimental Code needs severe improvements before being used
+            // var rngbig = rnggen(25);
+            // var rngbig2 = rnggen(rngbig);
+            // if(rngbig2 == 1) {
+            //     contentdiv.setAttribute("class", "content-container wide-tile long-tile");
+            // }
         }
 
         imag.setAttribute("src", imgtotran);

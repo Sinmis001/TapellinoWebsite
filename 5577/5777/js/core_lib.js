@@ -42,18 +42,50 @@ function checkforscrollbarandact() {
 // Just in case the user decides he will resize or move the page to a smaller or bigger screen
 window.addEventListener('resize', checkforscrollbarandact);
 
+
+// Go to top button
+function totop() {
+    var scrollpos = document.documentElement.scrollTop;
+    var posit = scrollpos;
+    var i=0;
+    animatedloopscroll(posit, scrollpos, i);
+}
+
+function animatedloopscroll(posit, scrollpos, i) {    
+    var poschang=30;
+    setTimeout(() => {
+        document.documentElement.scrollTop = posit;
+        posit=posit-poschang;
+        i+=poschang;
+        if(i<scrollpos) {
+            animatedloopscroll(posit, scrollpos, i);
+        }
+    }, 1)
+}
+
+function displaytotop() {
+    var totopbut = document.querySelector('#gototop');
+    if(document.documentElement.scrollTop > 750) {
+        totopbut.style.display = "block";
+    } else {
+        totopbut.style.display = "none";
+    }
+}
+
+// To display or not to display the thing
+window.addEventListener('scroll', displaytotop);
+
+
 // Web Builder for simulating server-side construction
 function webbuilder() {
-    setTimeout(()=> { 
-    // Construct navigation and footer
-    errorcatcher(nav_builder);
-    errorcatcher(footerconstructor);
+    setTimeout(()=> {
+    // Nav & Footer constructor
+    footer_constructor('footer');
     
     // Check for scrollbar and deal with it, remove scripts so they don't appear in inspector and discover the menus to add clickability and hoverability
     errorcatcher(checkforscrollbarandact);
     title_fix();
     setTimeout(remove_unwanted_scripts(), 10);
-    menusdiscovery();
     }, 1);
 }
 

@@ -1,5 +1,13 @@
 /* Navigation CSS */
 
+header {
+    position: relative;
+    height: 10vh;
+    z-index:999;
+    box-sizing: border-box;
+    background-color:var(--accent_color);
+}
+
 /* Formerly #CCF, #NCF */
 div#nav-bar, div#nav-content {
     background-color: var(--jet_black);
@@ -69,11 +77,11 @@ a.nav-element {
 
 div.nav-element:hover div, a.nav-element:hover, a.nav-menu-element:hover {
     color:var(--Clear_water_blue) !important;
-    background-color: var(--accent_color);
-    transition: color 0.65s ease, background-color 0.65s linear;
+    background-color: var(--accent_color) !important;
+    transition: color 0.65s ease, background-color 0.65s linear !important;
 }
 
-div.nav-element:hover div span.arrow {
+div.nav-element:hover span.arrow {
     color:var(--Clear_water_blue) !important;
     transition: color 0.65s ease !important;
 }
@@ -109,7 +117,7 @@ div.menu ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:5.25vmin;
+    height:6.25vmin;
 }
 
 div.menu ul li a {
@@ -125,7 +133,7 @@ div.menu ul li a {
     padding-top: 0.45em;
     padding-bottom: 0.45em;
     box-sizing: border-box;
-    transition: color 0.65s ease;
+    transition: color 0.65s linear, background-color 0.65s linear;
 }
 
 div.menu ul li a.menu-header {
@@ -161,7 +169,7 @@ p.mobile-menu {
 
 /* Phone Menu CSS */
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
 
     div#nav-bar.accessed {
         flex-direction: column;
@@ -198,7 +206,6 @@ p.mobile-menu {
     p.mobile-menu.accessed {
         width:100%;
         height:8vh;
-        padding-top:0.45em;
     }
 
     a.nav-element, div.nav-element div {
@@ -229,7 +236,7 @@ p.mobile-menu {
     }
 
     div.menu ul li {
-        height:10vh;
+        height:8vh;
     }
 
     div.menu ul li a {
@@ -248,7 +255,40 @@ p.mobile-menu {
     }
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:1800px) and (min-width:1400px) {
+    div.nav-element div {
+        width:18vw !important;
+    }
+
+    div.menu ul {
+        width:18vw !important;
+    }
+}
+
+@media screen and (min-width:1800px) and (min-height:1100px) {
+    a.nav-element {
+        width: 9vw;
+    }
+
+    div.nav-element div {
+        width:16.5vw !important;
+    }
+
+    div.menu ul {
+        width:16.5vw !important;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width:1400px) and (max-height:1000px) {
+    div.menu ul a {
+        height:8vh !important;
+    }
+}
+
+@media screen and (max-width:900px) and (orientation:portrait) {
+    header {
+        height:10vh !important;
+    }
 
     div#logo-container {
         width:20vw;
@@ -268,7 +308,58 @@ p.mobile-menu {
         width:90%;
         display:inline-block;
     }
+
+    p.mobile-menu { 
+        font-size:3em;
+        height: 10vh !important;
+        width:20vw;
+    }
+
+    p.mobile-menu.accessed {
+        font-size:3.25em;
+    }
+
+    div.menu ul li {
+        height:7.5vh;
+    }
+}
+
+@media screen and (max-width:1200px) and (orientation:landscape) {
+    header {
+        height:20vh !important;
+    }
+
+    div#logo-container {
+        width:20vw;
+        margin:0;
+        padding:0;
+        padding-left:1vw;
+        position:relative;
+        float:left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
     
+    div#logo-container a {
+        height:14vh;
+        width:90%;
+        display:inline-block;
+    }
+
+    p.mobile-menu { 
+        font-size:3em;
+        height: 20vh !important;
+    }
+
+    p.mobile-menu.accessed {
+        font-size:3.25em;
+    }
+
+    div.menu ul li {
+        height:17.5vh;
+    }
 }
 
 /* Personalization */
@@ -276,4 +367,3 @@ p.mobile-menu {
     font-size: 2.4vmin;
     color: var(--Crystal_blue) !important;
 }
-

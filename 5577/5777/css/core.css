@@ -1,6 +1,7 @@
 /* HTML Standard Document */
 * {
     font-family: VRRegular, Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 html {
@@ -32,33 +33,3 @@ main {
     box-sizing: border-box;
 }
 
-/* Footer */
-
-/* Relocated to the css/footer.css file */
-
-/* Personalized Tag Changes */
-
-a {
-    text-decoration: none;
-}
-
-/* Arrows */
-
-.arrow {
-    display: inline-block;
-    vertical-align: middle;
-    border-radius:25%;
-    padding:4px;
-    box-sizing:border-box;
-    margin-left:8px;
-}
-
-.down {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.up {
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-}

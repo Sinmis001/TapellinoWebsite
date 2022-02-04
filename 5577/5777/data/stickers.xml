@@ -2,15 +2,15 @@
 <catalog>
     <normaltile>
         <data>
-            <nametag>For Sale Sticker</nametag>
+            <nametag>For Sale</nametag>
             <imgloc>images/stickers/forsalesticker.svg</imgloc>
         </data>
         <data>
-            <nametag>Toyota Sticker</nametag>
+            <nametag>Toyota</nametag>
             <imgloc>images/stickers/toyota.svg</imgloc>
         </data>
         <data>
-            <nametag>Honda Sticker</nametag>
+            <nametag>Honda</nametag>
             <imgloc>images/stickers/honda.svg</imgloc>
         </data>
         <data>
@@ -40,7 +40,7 @@
     </normaltile>
     <widetile>
         <data>
-            <nametag>Kawasaki Sticker</nametag>
+            <nametag>Kawasaki</nametag>
             <imgloc>images/stickers/kawasaki.svg</imgloc>
         </data>
     </widetile>

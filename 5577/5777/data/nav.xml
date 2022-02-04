@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nav>
+    <div id="nav-bar">
+        <div id="logo-container">
+            <a href="https://www.tapellino.com">
+                <img src="images/tapellino.svg" alt="Tapellino Signs" id="logo"></img>
+            </a>
+        </div>
+
+        <p class="mobile-menu menu">a</p>
+
+        <div id="nav-content">
+            <a href="https://www.tapellino.com" class="nav-element">Home</a>
+            <div class="nav-element menu">
+                <div>Products / Services<span class="arrow">3</span></div>
+                <ul>
+                    <li><a href="signage" class="nav-menu-element menu-header">Signage</a></li>
+                    <li><a href="exterior-signs" class="nav-menu-element">Exterior Signs</a></li>
+                    <li><a href="interior-signs" class="nav-menu-element">Interior Signs</a></li>
+                    <li><a href="3d-signs" class="nav-menu-element">3D Signs</a></li>
+                    <li><a href="illuminated-signs" class="nav-menu-element">Illuminated Signs</a></li>
+                    <li><a href="other-services" class="nav-menu-element menu-header">Other Services</a></li>
+                    <li><a href="stickers" class="nav-menu-element">Stickers</a></li>
+                    <li><a href="digital-printing#banners" class="nav-menu-element">Banners</a></li>
+                    <li><a href="digital-printing" class="nav-menu-element">Digital Printing</a></li>
+                    <li><a href="laser-cutting" class="nav-menu-element">Laser Cutting</a></li>
+                    <li><a href="acrylic-fabrication" class="nav-menu-element">Acrylic Fabrication</a></li>
+                </ul>
+            </div>
+            <a href="contact" class="nav-element">Contact</a>
+        </div>
+    </div>
+</nav>

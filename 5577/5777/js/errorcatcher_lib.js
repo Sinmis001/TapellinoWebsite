@@ -5,8 +5,5 @@ function errorcatcher(functionchecker) {
     }
     catch(error) {
         console.error(error);
-        // Sometimes pages fail in some areas and i have to rerun them
-        errorcatcher(functionchecker)
     }
-
 }
