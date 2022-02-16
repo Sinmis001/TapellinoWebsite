@@ -13,7 +13,6 @@
 html {
     margin:0;
     padding:0;
-    overflow-y: hidden;
     display: block !important;
 }
 
@@ -35,7 +34,7 @@ body {
     width:100vw;
     height:100vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: visible;
     z-index:1;
     margin:0;
     padding:0;
@@ -47,13 +46,12 @@ body {
 
 body.light {
     /* Main Color Kit */
-    --text-color: #333333;
+    --text-color: #101010;
     --background-color: #eeeeee;
     --accent_color: #bbbbbb;
     --secondary_accent_color:#aaaaaa;
-    --silver_accent: #afafaf;
-    --metal_color: #bbc2cc;
-    --dark_silver_accent: #777777;
+    --third_accent_color:#cccccc;
+    --jet_black:#ffffff;
 }
 
 main {
@@ -82,10 +80,8 @@ main {
 /* Arrows */
 
 .arrow {
-    font-size: 1.5em !important;
     font-family: Eleganticons !important;
     box-sizing: border-box;
-    padding-bottom: 0.075em;
     transition: color 0.65s ease !important;
 }
 

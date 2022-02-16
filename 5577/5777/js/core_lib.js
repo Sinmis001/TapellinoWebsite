@@ -10,6 +10,26 @@ function title_fix() {
 // Update on resize so it always has correct height
 window.addEventListener('resize', title_fix);
 
+// Dawn & Dusk Checkbox 
+// Default: dusk
+const dawnduskcheck = document.querySelector('#dawn_dusk');
+
+function dawndusk() {
+    const dusk = document.querySelector('#dusk');
+    const dawn = document.querySelector('#dawn');
+    if(dawnduskcheck.checked) {
+        dawn.style="display:block";
+        dusk.style="display:none";
+        document.body.classList.add('light');
+    } else {
+        dawn.style="display:none";
+        dusk.style="display:block";
+        document.body.classList.remove('light');
+    }
+}
+
+dawnduskcheck.addEventListener('click', dawndusk);
+
 // Some scripts are required for the page to load but not after it has loaded so we removed them to make the page code cleaner
 function remove_unwanted_scripts() {
     let delscriptele = document.getElementsByClassName("delonload");
@@ -22,7 +42,7 @@ function remove_unwanted_scripts() {
 // Scrollbar functions
 function scrollbarhandler() {
     var scrollbarwidth = window.innerWidth - document.documentElement.clientWidth;
-    var coreelements = [document.querySelector('main'), document.querySelector('header'), document.querySelector('footer')];
+    var coreelements = [document.querySelector('main'), document.querySelector('div[nav]'), document.querySelector('footer')];
     var lnum;
     for(lnum=0; lnum<coreelements.length; lnum++) {
         coreelements[lnum].style = "margin-right: "+scrollbarwidth+"px;";
@@ -74,7 +94,6 @@ function displaytotop() {
 
 // To display or not to display the thing
 window.addEventListener('scroll', displaytotop);
-
 
 // Web Builder for simulating server-side construction
 function webbuilder() {

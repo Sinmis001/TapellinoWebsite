@@ -26,10 +26,6 @@ function menusdiscovery() {
     menus = document.querySelectorAll('.menu');
     mobmenu = document.querySelector('.mobile-menu');
     // Products / Services Menu
-    // Desktop
-    menus[1].addEventListener('mouseenter', accessed);
-    menus[1].addEventListener('mouseleave', leftmenu);
-
     // Touch Screen
     menus[1].addEventListener('click', cpmenu);
 
@@ -38,29 +34,28 @@ function menusdiscovery() {
     mobmenu.addEventListener('click', cmenu);
 }
 
-// Hover effects
-function accessed() {
-    this.classList.add("accessed");
-    var e = this.querySelector('ul');
-    heightoful(e);
-}
-
-function leftmenu() {
-    this.classList.remove("accessed");
-    var e = this.querySelector('ul');
-    removeheight(e);
-}
-
 // Click effects
 function cmenu() {
     var mobnav = document.querySelector('#nav-bar');
     if(cstatus===0) {
         mobnav.classList.add("accessed");
         this.classList.add("accessed");
+        let backdrop = document.querySelector('main');
+        backdrop.style='filter: blur(4px) brightness(65%); overflow-y:visible;';
+        backdrop = document.querySelector('footer');
+        backdrop.style='filter: blur(4px) brightness(65%);';
+        backdrop = document.body;
+        backdrop.style='overflow:hidden;';
         cstatus=1;
     } else {
         mobnav.classList.remove("accessed");
         this.classList.remove("accessed");
+        let backdrop = document.querySelector('main');
+        backdrop.style='';
+        backdrop = document.querySelector('footer');
+        backdrop.style='';
+        backdrop = document.body;
+        backdrop.style='';
         cstatus=0;
     }
 }

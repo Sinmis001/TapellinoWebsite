@@ -39,8 +39,8 @@ div.content-container {
 }
 
 .wide-tile h1 {
-    font-size: 3vw !important;
-    margin-top: 0.5vh !important;
+    font-size: 2.25vw !important;
+    margin-top: 0.5em !important;
 }
 
 .wide-tile img {
@@ -57,7 +57,7 @@ div.content-container {
 }
 
 .long-tile.wide-tile h1 {
-    font-size: 3vw !important;
+    font-size: 2.25vw !important;
     margin-top: 0.5vh !important;
 }
 
@@ -69,12 +69,11 @@ div.content-container h1 {
     display: inline-block;
     width: 90%;
     text-align: center;
-    top:100%;
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-weight: 400;
     margin:0;
     padding:0;
-    margin-top:1.5vh;
+    margin-top:1em;
 }
 
 @media screen and (max-width:1300px) and (min-width: 750px) {

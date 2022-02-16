@@ -44,7 +44,7 @@ function lander_construction(filename) {
 function nav_constructor(filename) {
     var xml = xmlcall(filename);
     var nav = xml.querySelector('nav').innerHTML;
-    var headertag = document.querySelector('header');
+    var headertag = document.querySelector('div[nav]');
     headertag.innerHTML += nav;
 }
 

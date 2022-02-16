@@ -113,7 +113,7 @@ div#stickerpagetext h3 {
 div#cover::before {
     content: '';
     width:100vw;
-    height:10em;
+    height:20vh;
     display: block;
     position: absolute;
     -webkit-backface-visibility: hidden;
